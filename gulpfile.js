@@ -4,7 +4,6 @@ var pug = require('gulp-pug');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var connect = require('gulp-connect');
-//var copyf= require('gulp');
 
 //Copy images 
 gulp.task('copyfile', function(){
@@ -13,18 +12,21 @@ gulp.src('src/assets/images/**.{jpg,png,gif,svg}').pipe(gulp.dest('dist/assets/i
 console.log("Images copied!");
 });
 
+//copy audios
 gulp.task('copyaudios', function(){
 gulp.src('src/audio/**.{mp3,wav,mp4,wv}').pipe(gulp.dest('dist/assets/audio'))
 .pipe(connect.reload());
 console.log("Audios copied!");
 });
 
+//copy json files
 gulp.task('copyjson', function(){
 gulp.src('src/data/**.json').pipe(gulp.dest('dist/data/'))
 .pipe(connect.reload());
 console.log("json data copied!");
 });
 
+//process sass/scss files
 gulp.task('sass',function(){
   return gulp.src('src/sass/style.{scss,sass}')
   .pipe(sass()).pipe(gulp.dest('dist/css'))
@@ -63,7 +65,7 @@ gulp.task('convert', function(){
   connect.server({
     name: "profile_material_design", 
     root: 'dist/',
-    port: '5000',
+    port: '3000',
     livereload: true,
   });
  });
