@@ -6,10 +6,13 @@ $width:100%;
 *{
 	box-sizing: border-box;
 }
+html{
+	font-size: 1px;
+}
 
 body{
 	font: 100% $font-stack;
-	font-size: 1px;
+	font-size: 14rem;
 	color: black;
 	margin: 0px;
 	padding: 0px;

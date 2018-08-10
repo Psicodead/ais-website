@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 1px; }
+
+body {
+  font: 100% Helvetica, sans-serif;
+  font-size: 14rem;
+  color: black;
+  margin: 0px;
+  padding: 0px; }
+  body a {
+    text-decoration: none;
+    color: black; }
