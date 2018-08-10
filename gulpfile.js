@@ -21,7 +21,7 @@ console.log("Audios copied!");
 
 //copy json files
 gulp.task('copyjson', function(){
-gulp.src('src/data/**.json').pipe(gulp.dest('dist/data/'))
+gulp.src('src/js/data/**.json').pipe(gulp.dest('dist/js/data/'))
 .pipe(connect.reload());
 console.log("json data copied!");
 });
@@ -38,7 +38,7 @@ gulp.task('start_watch',function(){
 gulp.watch('src/sass/*.{scss,sass}', ['sass']);
 gulp.watch('src/pug/*.pug', ['convert']);
 gulp.watch('src/js/*.js', ['browserify']);
-gulp.watch('src/data/**.json', ['copyjson']);
+gulp.watch('src/js/data/**.json', ['copyjson']);
 gulp.watch('src/assets/images/**.{png,jpg,svg,gif}', ['copyfile']);
 gulp.watch('src/assets/audio/**.{mp3,wav,mp4,wv}', ['copyaudios'])
 });
@@ -60,15 +60,16 @@ gulp.task('convert', function(){
         .pipe(gulp.dest('dist/js'))
         .pipe(connect.reload());
 });
+gulp.task('init',['convert','browserify','sass']);
 
- gulp.task('connect', function(){
+gulp.task('connect', function(){
   connect.server({
     name: "profile_material_design", 
     root: 'dist/',
     port: '3000',
     livereload: true,
   });
- });
+});
 
-gulp.task('default', ['connect','start_watch','copyfile','copyaudios']);
+gulp.task('default', ['init','connect','start_watch','copyfile','copyaudios']);
 gulp.task('load', ['start_watch','copyfile','copyaudios']);

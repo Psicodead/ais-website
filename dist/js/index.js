@@ -27474,7 +27474,58 @@ return jQuery;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],3:[function(require,module,exports){
+module.exports={
+	"projects":{
+		"work":[
+			{
+				"title": "Monarch Reign AR",
+				"description" : "this is the description of Monarch",
+				"client" : "Monarch Reign swimwear"
+			},
+			{
+				"title": "Come Find Me",
+				"description" : "this is the description of Come Find Me",
+				"client" : "Confidential"
+			},
+			{
+				"title": "Carhartt AR",
+				"description" : "this is the description of Carhartt",
+				"client" : "Carhartt Wineyard"
+			}
+		],
+		"studies":[
+			{
+				"Title": "Horse race ar",
+				"description": "description of the prototype"
+			},
+			{
+				"Title": "XR Horror Game",
+				"description": "description of the prototype XR horror game"
+			}
+		]
+	}
+}
+},{}],4:[function(require,module,exports){
 var lodash = require('lodash');
 var $ = require('jquery');
+var json = require('./data/project.json'); //with path
 
-},{"jquery":1,"lodash":2}]},{},[3]);
+//var mJson = JSON.parse(json);
+console.log("json",json.projects);
+function createProjects(){
+	for (var i = json.projects.work.length - 1; i >= 0; i--) {
+		//json.projects.work[i]
+		var obj = json.projects.work[i];
+		var work= $('<div />',{"class":'work'})
+		var wTitle = $('<h1 />',{"class":'title', text:obj.title})
+		var wDes = $('<p />',{"class":'description', text:obj.description})
+		var wClient = $('<p />',{"class":'client', text:obj.client})
+		work.append(wTitle,wDes,wClient)
+		$(".work-container").append(work);
+	};	
+}
+
+$(document).ready(()=>{
+	createProjects();
+})
+},{"./data/project.json":3,"jquery":1,"lodash":2}]},{},[4]);
