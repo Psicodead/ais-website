@@ -69,3 +69,38 @@ body {
       top: 50px;
       right: 60px;
       width: 50px; }
+  body .menu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 4;
+    background: #001323;
+    top: 0;
+    left: 0; }
+    body .menu .options, body .menu .social {
+      position: absolute;
+      bottom: 100rem; }
+    body .menu .options {
+      left: 60rem; }
+      body .menu .options .opt {
+        color: white;
+        font-weight: bold;
+        font-size: 65rem;
+        text-transform: uppercase;
+        margin: 15rem 0; }
+    body .menu .social {
+      right: 60rem;
+      position: absolute;
+      bottom: 100rem; }
+      body .menu .social .container {
+        position: absolute;
+        bottom: 0;
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        transform-origin: bottom left; }
+        body .menu .social .container a {
+          color: white;
+          margin-right: 30rem; }

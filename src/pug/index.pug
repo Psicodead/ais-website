@@ -6,20 +6,12 @@ html(lang="en")
 
 	body
 		.content-wrapper
-			.fixed-ui
-				a.logo(href="#")
-					img(src="/assets/images/ais_logo.svg")
-				.openMenuBtn
-					img(src="/assets/images/icon_menu.svg")
-				.scrollbar
-			#landing-section
-				.feature-work
-					//img(src="/assets/images/placeholder_image.png")
-			
+			include _fixed-ui.pug
+			include _landing.pug
 			#work-section
 				.work-container
 					.work initial for debugging
 				footer
 					h3 	All rights reserved to Augmented Island Studios 2018
-
+			include _menu.pug
 		script(src='/js/index.js')
