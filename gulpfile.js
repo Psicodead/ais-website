@@ -5,6 +5,7 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var connect = require('gulp-connect');
 
+//TODO: add task to copy fonts
 //Copy images 
 gulp.task('copyfile', function(){
 gulp.src('src/assets/images/**.{jpg,png,gif,svg}').pipe(gulp.dest('dist/assets/images'))
