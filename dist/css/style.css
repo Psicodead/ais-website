@@ -1,7 +1,12 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: relative; }
+
+img {
+  width: 100%; }
 
 html {
+  background-color: #001323;
   font-size: 1px;
   width: 100vw;
   height: 100vh;
@@ -10,17 +15,57 @@ html {
   overflow: hidden; }
 
 body {
-  background-color: gray;
+  background-color: #001323;
   color: black;
   font: 100% Helvetica, sans-serif;
   font-size: 14rem;
   margin: 0px;
   padding: 0px;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden;
+  padding: 20px; }
   body a {
     text-decoration: none;
     color: black; }
+  body .content-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
   body .work {
     width: 100%;
     border: 1px dashed white; }
+  body #landing-section {
+    background-color: red;
+    width: 100%;
+    height: 100%; }
+    body #landing-section .feature-work {
+      width: 100%;
+      height: 100%;
+      background-image: url("/assets/images/placeholder_image.png");
+      background-origin: center;
+      background-position: center;
+      background-size: cover;
+      background-repeat: 0; }
+  body .fixed-ui {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 100px; }
+    body .fixed-ui .logo {
+      cursor: pointer;
+      position: absolute;
+      top: 50px;
+      left: 60px;
+      width: 50px; }
+      body .fixed-ui .logo img {
+        width: 100%; }
+    body .fixed-ui .openMenuBtn {
+      cursor: pointer;
+      position: absolute;
+      top: 50px;
+      right: 60px;
+      width: 50px; }

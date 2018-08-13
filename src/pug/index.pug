@@ -1,14 +1,25 @@
 doctype html
 html(lang="en")
 	head
-		tittle= MyFirstApp
+		title= AIS
 		link(href='/css/style.css', rel='stylesheet')
 
 	body
 		.content-wrapper
-			.work-container
-				.work initial for debugging
-			footer
-				h3 	All rights reserved to Augmented Island Studios 2018
+			.fixed-ui
+				a.logo(href="#")
+					img(src="/assets/images/ais_logo.svg")
+				.openMenuBtn
+					img(src="/assets/images/icon_menu.svg")
+				.scrollbar
+			#landing-section
+				.feature-work
+					//img(src="/assets/images/placeholder_image.png")
+			
+			#work-section
+				.work-container
+					.work initial for debugging
+				footer
+					h3 	All rights reserved to Augmented Island Studios 2018
 
 		script(src='/js/index.js')

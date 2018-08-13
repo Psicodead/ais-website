@@ -1,0 +1,20 @@
+#landing-section{
+	background-color: red;
+	width: 100%; height: 100%;
+	.feature-work{
+		width: 100%;
+		height: 100%;
+		background-image: url('/assets/images/placeholder_image.png');
+		background-origin: center;
+		background-position: center;
+		background-size: cover;
+		background-repeat: 0;
+		img{
+			// @include transform(translate(-50%, -50%));
+			// position: absolute;
+			// top: 50%;
+			// left: 50%;
+			// width: 105%;
+		}
+	}
+}
