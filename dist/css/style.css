@@ -1,3 +1,27 @@
+@font-face {
+  font-family: KelsonSans;
+  src: url("/assets/fonts/Kelson Sans Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: KelsonSans;
+  src: url("/assets/fonts/Kelson Sans Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: Roboto;
+  src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: Roboto;
+  src: url("/assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
 * {
   box-sizing: border-box;
   position: relative; }
@@ -14,10 +38,19 @@ html {
   padding: 0px;
   overflow: hidden; }
 
+p, a {
+  font-family: "Roboto", Helvetica, sans-serif, arial;
+  font-weight: normal; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "KelsonSans", Helvetica, sans-serif, arial;
+  font-weight: bold;
+  text-transform: uppercase; }
+
 body {
   background-color: #001323;
-  color: black;
-  font: 100% Helvetica, sans-serif;
+  color: white;
+  font: 100% Helvetica, sans-serif, arial;
   font-size: 14rem;
   margin: 0px;
   padding: 0px;
@@ -27,7 +60,7 @@ body {
   padding: 20px; }
   body a {
     text-decoration: none;
-    color: black; }
+    color: white; }
   body .content-wrapper {
     width: 100%;
     height: 100%;
@@ -35,6 +68,11 @@ body {
   body .work {
     width: 100%;
     border: 1px dashed white; }
+  body .line {
+    background: white;
+    height: 2px;
+    text-align: center;
+    display: inline-block; }
   body #landing-section {
     background-color: red;
     width: 100%;
@@ -47,6 +85,43 @@ body {
       background-position: center;
       background-size: cover;
       background-repeat: 0; }
+      body #landing-section .feature-work .info-wrapper {
+        position: absolute;
+        bottom: 60rem;
+        left: 60rem; }
+        body #landing-section .feature-work .info-wrapper .index {
+          width: 40%;
+          display: flex;
+          justify-content: space-between; }
+          body #landing-section .feature-work .info-wrapper .index .line {
+            width: 25%; }
+        body #landing-section .feature-work .info-wrapper .titles {
+          margin: 20rem 0 10rem 0; }
+          body #landing-section .feature-work .info-wrapper .titles .tag {
+            text-align: right;
+            letter-spacing: 1rem;
+            font-size: 15rem;
+            margin: 0;
+            margin-bottom: 7rem; }
+          body #landing-section .feature-work .info-wrapper .titles h1 {
+            margin: 0;
+            font-size: 40rem; }
+        body #landing-section .feature-work .info-wrapper .linkToStudy {
+          display: flex;
+          justify-content: middle;
+          align-items: center; }
+          body #landing-section .feature-work .info-wrapper .linkToStudy .line {
+            flex-basis: 50%;
+            margin-right: 10%; }
+          body #landing-section .feature-work .info-wrapper .linkToStudy .link {
+            flex-basis: auto;
+            white-space: nowrap;
+            letter-spacing: 0.5rem; }
+          body #landing-section .feature-work .info-wrapper .linkToStudy .arrow {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 5rem;
+            width: 10rem; }
   body .fixed-ui {
     position: fixed;
     z-index: 5;
@@ -70,6 +145,7 @@ body {
       right: 60px;
       width: 50px; }
   body .menu {
+    display: none;
     width: 100%;
     height: 100%;
     position: fixed;
