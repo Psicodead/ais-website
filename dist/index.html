@@ -12,67 +12,93 @@
         <div class="closeMenuBtn hidden"><img src="./assets/images/icon_x_menu.svg"></div>
         <div class="scrollbar"></div>
       </div>
-      <div class="section" id="landing-section">
-        <div class="feature-work">
-          <div class="info-wrapper">
-            <div class="index">
-              <div class="line"></div>
-              <div class="line"></div>
-              <div class="line"></div>
+      <div class="section hidden" id="landing-section">
+        <div class="content">
+          <div class="feature-work">
+            <div class="info-wrapper">
+              <div class="index">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+              <div class="titles">
+                <h3 class="tag">Feature work</h3>
+                <h1 class="name">Come Find Me</h1>
+                <h1 class="client">/ Terry Crew</h1>
+              </div>
+              <div class="linkToStudy">
+                <div class="line"></div><a class="link" href="#">View Case Study
+                  <div class="arrow"><img src="./assets/images/icon_arrow.svg" alt=""></div></a>
+              </div>
             </div>
-            <div class="titles">
-              <h3 class="tag">Feature work</h3>
-              <h1 class="name">Come Find Me</h1>
-              <h1 class="client">/ Terry Crew</h1>
-            </div>
-            <div class="linkToStudy">
-              <div class="line"></div><a class="link" href="#">View Case Study
-                <div class="arrow"><img src="./assets/images/icon_arrow.svg" alt=""></div></a>
-            </div>
+            <!--img(src="/assets/images/placeholder_image.png")-->
           </div>
-          <!--img(src="/assets/images/placeholder_image.png")-->
         </div>
       </div>
       <div class="section hidden" id="work-section">
-        <div class="bg-container">
-          <div class="workOpts"><img class="one" src="./assets/images/comefindme.jpg" alt=""><img class="two selected" src="./assets/images/monarch.jpg" alt=""><img class="three" src="./assets/images/carhartt.jpg" alt=""></div>
-          <div class="labOpts hidden"><img class="one selected" src="./assets/images/comingsoon.jpg" alt=""></div>
+        <div class="content">
+          <div class="bg-container">
+            <div class="workOpts"><img class="one" src="./assets/images/comefindme.jpg" alt=""><img class="two selected" src="./assets/images/monarch.jpg" alt=""><img class="three" src="./assets/images/carhartt.jpg" alt=""></div>
+            <div class="labOpts hidden"><img class="one selected" src="./assets/images/comingsoon.jpg" alt=""></div>
+          </div>
+          <div class="selector-container">
+            <div class="work-projects project-container">
+              <div class="project one">
+                <div class="index">01</div>
+                <h2 class="tag">Featured</h2>
+                <h1 class="name">Come Find Me</h1>
+                <p class="client">Terry Crew</p>
+              </div>
+              <div class="project two selected"> 
+                <div class="index">02</div>
+                <div class="tag"></div>
+                <h1 class="name">Monarch AR</h1>
+                <p class="client">Monarch Reign</p>
+              </div>
+              <div class="project three"> 
+                <div class="index">03</div>
+                <div class="tag"></div>
+                <h1 class="name">Augmented Vineyard</h1>
+                <p class="client">Carhartt</p>
+              </div>
+            </div>
+            <div class="lab-projects project-container hidden">
+              <div class="project one selected">
+                <div class="index">000</div>
+                <h2 class="tag"></h2>
+                <h1 class="name">Coming soon</h1>
+                <p class="client">AR/VR/XR</p>
+              </div>
+            </div>
+          </div>
+          <div class="work-type">
+            <div class="container">
+              <h2 class="opt work-opt selected">Work</h2>
+              <h2 class="opt lab-opt">Lab</h2>
+            </div>
+          </div>
         </div>
-        <div class="selector-container">
-          <div class="work-projects project-container">
-            <div class="project one">
-              <div class="index">01</div>
-              <h2 class="tag">Featured</h2>
-              <h1 class="name">Come Find Me</h1>
-              <p class="client">Terry Crew</p>
+      </div>
+      <div class="section" id="about-section">
+        <div class="content">
+          <div class="aboutText">
+            <p class="highligh">We are a full service augmented reality and virtual reality studio based in San Luis Obispo, California with development offices in Cali, Colombia.</p>
+            <p class="copy">With over 40 years of combined real time development experience, we serve a multitude of clients in a myriad of industries, who want to and now, need to, take advantage of the new and interesting ways in which AR and VR can help their businesses evolve. From curious and fun AR/VR applications to complex 3D simulations, we are able to set you apart from your competition.</p>
+            <h1 class="lineTitle">About Us</h1>
+          </div>
+          <div class="teamPhotos">
+            <h1 class="lineTitle">The Team</h1>
+            <div class="leftPhotos">
+              <div class="team"><img src="../assets/images/ais_team_.png" alt="Enrique - CEO"></div>
+              <div class="team"><img src="../assets/images/ais_team_.png" alt="Mauricio - CAD"></div>
             </div>
-            <div class="project two selected"> 
-              <div class="index">02</div>
-              <div class="tag"></div>
-              <h1 class="name">Monarch AR</h1>
-              <p class="client">Monarch Reign</p>
-            </div>
-            <div class="project three"> 
-              <div class="index">03</div>
-              <div class="tag"></div>
-              <h1 class="name">Augmented Vineyard</h1>
-              <p class="client">Carhartt</p>
+            <div class="rightPhotos">
+              <div class="team"><img src="../assets/images/ais_team_.png" alt="Kammil - CCD"></div>
+              <div class="team"><img src="../assets/images/ais_team_.png" alt="Ramon - CTO"></div>
             </div>
           </div>
-          <div class="lab-projects project-container hidden">
-            <div class="project one selected">
-              <div class="index">000</div>
-              <h2 class="tag"></h2>
-              <h1 class="name">Coming soon</h1>
-              <p class="client">AR/VR/XR</p>
-            </div>
-          </div>
-        </div>
-        <div class="work-type">
-          <div class="container">
-            <h2 class="opt work-opt selected">Work</h2>
-            <h2 class="opt lab-opt">Lab</h2>
-          </div>
+          <div class="links"><a class="opt menu-work" href="#">See Our Work</a><a class="opt menu-contact" href="#">Contact Us</a></div>
+          <div class="social"><a class="sn facebook" href="https://www.facebook.com/augmentedislandstudios/?ref=br_rs" target="_blank">Facebook</a><a class="sn instagram" href="https://www.instagram.com/augmentedislandstudios/?hl=en" target="_blank">Instagram</a><a class="sn linkedin" href="https://www.linkedin.com/company/augmented-island-studios/" target="_blank">Linkedin</a></div>
         </div>
       </div>
       <div class="menu hidden">

@@ -32,7 +32,7 @@ body{
 	margin: 0px; padding: 0px;
 	width: 100%; height: 100%;
 	overflow: hidden;
-	padding: 20px;
+	//padding: 20px;
 	a{
 		text-decoration: none;
 		color: white;
@@ -42,6 +42,15 @@ body{
 		height: 100%;
 		overflow: hidden;
 		.section{
+			overflow: hidden;
+			padding: 20px;
+			width: 100%;
+			height: 100%;
+			.content{
+				overflow: hidden;
+				width: 100%;
+				height: 100%;
+			}
 			&.hidden{
 				display: none;
 			}
@@ -62,5 +71,6 @@ body{
 	@import '_landing';
 	@import '_work';
 	@import '_fixed-ui';
+	@import '_about';
 	@import '_menu';
 }
