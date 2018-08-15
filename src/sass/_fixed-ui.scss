@@ -14,17 +14,38 @@
 	.logo{
 		cursor: pointer;
 		position: absolute;
-		top: 50px; left: 60px;
+		top: 50px; left: 80px;
 		width: 50px;
 		img{
 			width: 100%;
+		}
+	}
+	.isotipo{
+		//display: none;
+		position: absolute;
+		left: 150px;
+		top: 54rem;
+		width: 150px;
+		overflow: hidden;
+		img{
+			height: 100%;
+			top: 0;
+			@include transform(translateX(-100%));
+			position: relative;
+			@include transition(transform 600ms);
+		}
+		&.show{
+			//display: block;
+			img{
+				@include transform(translateX(0));
+			}
 		}
 	}
 	
 	.closeMenuBtn, .openMenuBtn{
 		cursor: pointer;
 		position: absolute;
-		top: 50px; right: 60px;
+		top: 50px; right: 80px;
 		width: 50px;
 		&.hidden{
 			display: none;

@@ -27545,6 +27545,7 @@ function closeMenu(){
 	$('.menu').addClass('hidden');
 	$('.openMenuBtn').removeClass('hidden');
 	$('.closeMenuBtn').addClass('hidden');
+	$('.isotipo').removeClass('show');
 	setTimeout(()=>{
 		$('.menu').removeClass('transition');
 	},300)
@@ -27552,6 +27553,7 @@ function closeMenu(){
 
 function openMenu(){
 	$('.menu').addClass('transition');
+	$('.isotipo').addClass('show');
 	setTimeout(()=>{
 		$('.menu').removeClass('hidden');
 		$('.menu').addClass('show');

@@ -37,6 +37,7 @@
 			align-items: center;
 			justify-content: center;
 			.project{
+				cursor: pointer;
 				margin: 30rem auto;
 				h1,p{
 					text-align: center;
@@ -90,7 +91,7 @@
 	}
 	.work-type{
 		position: absolute;
-		left: 60rem;
+		left: 80rem;
 		bottom: 60rem;
 		.container{
 			position: absolute;
@@ -106,6 +107,7 @@
 				margin: 0;
 				margin-right: 30rem;
 				letter-spacing: 4rem;
+				
 				&.selected{
 					&::after, &:after{
 						content: " ";

@@ -28,7 +28,7 @@
 		bottom: 100rem;
 	}
 	.options{
-		left: 60rem;
+		left: 80rem;
 		.opt{
 			font-family: KelsonSans, $font-stack;
 			display: block;
@@ -37,10 +37,25 @@
 			font-size: 65rem;
 			text-transform: uppercase;
 			margin: 15rem 0;
+			// &:after, &::after{
+			// 	content: "";
+			// 	height: 2rem;
+			// 	width: 0;
+			// 	background-color: white;
+			// 	position: absolute;
+			// 	bottom: -2px;
+			// 	left: 0;
+			// 	@include transition(width 300ms);
+			// }
+			// &:hover{
+			// 	&:after, &::after{
+			// 		width: 100%;
+			// 	}
+			// }
 		}
 	}
 	.social{
-		right: 60rem;
+		right: 80rem;
 		position: absolute;
 		bottom: 100rem;
 		.container{
