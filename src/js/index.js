@@ -20,6 +20,7 @@ function createProjects(){
 $(document).ready(()=>{
 	createProjects();
 	menuControl();
+	selectWork();
 })
 
 function menuControl(){
@@ -40,5 +41,22 @@ function menuControl(){
 		setTimeout(()=>{
 			$('.menu').removeClass('transition');
 		},300)
+	})
+}
+
+function selectWork(){
+	$('.project').hover(()=>{
+		$('.project').removeClass('selected');
+		$('.work-bg-container img').removeClass('selected');
+	})
+
+	$('.project.one').hover(()=>{
+		$('.one').addClass('selected');
+	})
+	$('.project.two').hover(()=>{
+		$('.two').addClass('selected');
+	})
+	$('.project.three').hover(()=>{
+		$('.three').addClass('selected');
 	})
 }

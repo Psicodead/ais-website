@@ -127,6 +127,23 @@ body {
   body #work-section {
     width: 100%;
     height: 100%; }
+    body #work-section .work-bg-container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      body #work-section .work-bg-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        -moz-transition: opacity 600ms;
+        -o-transition: opacity 600ms;
+        -webkit-transition: opacity 600ms;
+        transition: opacity 600ms;
+        opacity: 0; }
+        body #work-section .work-bg-container img.selected {
+          opacity: 1; }
     body #work-section .selector-container {
       width: 100%;
       height: 100%;
@@ -160,10 +177,10 @@ body {
           -webkit-text-stroke-color: white;
           letter-spacing: 3rem;
           font-size: 60rem;
-          -moz-transition: font-size 200ms, color 200ms;
-          -o-transition: font-size 200ms, color 200ms;
-          -webkit-transition: font-size 200ms, color 200ms;
-          transition: font-size 200ms, color 200ms; }
+          -moz-transition: font-size 400ms, color 400ms;
+          -o-transition: font-size 400ms, color 400ms;
+          -webkit-transition: font-size 400ms, color 400ms;
+          transition: font-size 400ms, color 400ms; }
         body #work-section .selector-container .project:hover .name {
           font-size: 65rem; }
         body #work-section .selector-container .project.selected .name {
