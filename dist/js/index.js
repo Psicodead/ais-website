@@ -27527,5 +27527,27 @@ function createProjects(){
 
 $(document).ready(()=>{
 	createProjects();
+	menuControl();
 })
+
+function menuControl(){
+	$('.openMenuBtn').click(()=>{
+		$('.menu').addClass('transition');
+		setTimeout(()=>{
+			$('.menu').removeClass('hidden');
+			$('.menu').addClass('show');
+			$('.openMenuBtn').addClass('hidden');
+			$('.closeMenuBtn').removeClass('hidden');
+		},10)
+	})
+	$('.closeMenuBtn').click(()=>{
+		$('.menu').removeClass('show');
+		$('.menu').addClass('hidden');
+		$('.openMenuBtn').removeClass('hidden');
+		$('.closeMenuBtn').addClass('hidden');
+		setTimeout(()=>{
+			$('.menu').removeClass('transition');
+		},300)
+	})
+}
 },{"./data/project.json":3,"jquery":1,"lodash":2}]},{},[4]);

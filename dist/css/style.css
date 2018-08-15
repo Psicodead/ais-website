@@ -65,6 +65,8 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden; }
+    body .content-wrapper .section.hidden {
+      display: none; }
   body .work {
     width: 100%;
     border: 1px dashed white; }
@@ -96,16 +98,16 @@ body {
           body #landing-section .feature-work .info-wrapper .index .line {
             width: 25%; }
         body #landing-section .feature-work .info-wrapper .titles {
-          margin: 20rem 0 10rem 0; }
+          margin: 30rem 0 25rem 0; }
           body #landing-section .feature-work .info-wrapper .titles .tag {
             text-align: right;
             letter-spacing: 1rem;
-            font-size: 15rem;
+            font-size: 20rem;
             margin: 0;
             margin-bottom: 7rem; }
           body #landing-section .feature-work .info-wrapper .titles h1 {
             margin: 0;
-            font-size: 40rem; }
+            font-size: 55rem; }
         body #landing-section .feature-work .info-wrapper .linkToStudy {
           display: flex;
           justify-content: middle;
@@ -122,6 +124,52 @@ body {
             vertical-align: middle;
             margin-left: 5rem;
             width: 10rem; }
+  body #work-section {
+    width: 100%;
+    height: 100%; }
+    body #work-section .selector-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      body #work-section .selector-container .project {
+        margin: 30rem auto; }
+        body #work-section .selector-container .project h1, body #work-section .selector-container .project p {
+          text-align: center;
+          margin: 0; }
+        body #work-section .selector-container .project p {
+          letter-spacing: 1rem; }
+        body #work-section .selector-container .project .index {
+          position: absolute;
+          left: -20rem;
+          top: -5rem;
+          font-weight: bold;
+          font-family: KelsonSans, Helvetica, sans-serif, arial; }
+        body #work-section .selector-container .project .tag {
+          position: absolute;
+          top: -5rem;
+          left: 100%;
+          font-size: 14rem;
+          margin: 0;
+          margin-left: 10rem; }
+        body #work-section .selector-container .project .name {
+          color: transparent;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: white;
+          letter-spacing: 3rem;
+          font-size: 60rem;
+          -moz-transition: font-size 200ms, color 200ms;
+          -o-transition: font-size 200ms, color 200ms;
+          -webkit-transition: font-size 200ms, color 200ms;
+          transition: font-size 200ms, color 200ms; }
+        body #work-section .selector-container .project:hover .name {
+          font-size: 65rem; }
+        body #work-section .selector-container .project.selected .name {
+          font-size: 63rem;
+          color: white;
+          -webkit-text-stroke-width: 0px; }
   body .fixed-ui {
     position: fixed;
     z-index: 5;
@@ -129,7 +177,11 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    padding: 100px; }
+    padding: 100px;
+    user-select: none;
+    pointer-events: none; }
+    body .fixed-ui .logo, body .fixed-ui .openMenuBtn, body .fixed-ui .closeMenuBtn {
+      pointer-events: auto; }
     body .fixed-ui .logo {
       cursor: pointer;
       position: absolute;
@@ -138,27 +190,49 @@ body {
       width: 50px; }
       body .fixed-ui .logo img {
         width: 100%; }
-    body .fixed-ui .openMenuBtn {
+    body .fixed-ui .closeMenuBtn, body .fixed-ui .openMenuBtn {
       cursor: pointer;
       position: absolute;
       top: 50px;
       right: 60px;
       width: 50px; }
+      body .fixed-ui .closeMenuBtn.hidden, body .fixed-ui .openMenuBtn.hidden {
+        display: none; }
+    body .fixed-ui .closeMenuBtn {
+      width: 30rem; }
   body .menu {
-    display: none;
     width: 100%;
     height: 100%;
     position: fixed;
     z-index: 4;
     background: #001323;
     top: 0;
-    left: 0; }
+    left: 0;
+    -moz-transition: opacity 300ms;
+    -o-transition: opacity 300ms;
+    -webkit-transition: opacity 300ms;
+    transition: opacity 300ms; }
+    body .menu.show {
+      display: block;
+      opacity: 1; }
+    body .menu.hidden {
+      display: none;
+      opacity: 0; }
+    body .menu.transition {
+      display: block; }
+    body .menu .backgroundImage {
+      width: 100%;
+      height: 100%;
+      opacity: 0.05;
+      mix-blend-mode: lighten; }
     body .menu .options, body .menu .social {
       position: absolute;
       bottom: 100rem; }
     body .menu .options {
       left: 60rem; }
       body .menu .options .opt {
+        font-family: KelsonSans, Helvetica, sans-serif, arial;
+        display: block;
         color: white;
         font-weight: bold;
         font-size: 65rem;

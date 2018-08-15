@@ -6,6 +6,11 @@
 	//background-color: green;
 	top: 0; left: 0;
 	padding: 100px;
+	user-select: none;
+	pointer-events: none;
+	.logo, .openMenuBtn, .closeMenuBtn{
+		pointer-events: auto;
+	}
 	.logo{
 		cursor: pointer;
 		position: absolute;
@@ -15,10 +20,17 @@
 			width: 100%;
 		}
 	}
-	.openMenuBtn{
+	
+	.closeMenuBtn, .openMenuBtn{
 		cursor: pointer;
 		position: absolute;
 		top: 50px; right: 60px;
 		width: 50px;
+		&.hidden{
+			display: none;
+		}
+	}
+	.closeMenuBtn{
+		width: 30rem;
 	}
 }
