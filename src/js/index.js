@@ -21,33 +21,40 @@ $(document).ready(()=>{
 	createProjects();
 	menuControl();
 	selectWork();
+	menuNav();
 })
 
 function menuControl(){
 	$('.openMenuBtn').click(()=>{
-		$('.menu').addClass('transition');
-		setTimeout(()=>{
-			$('.menu').removeClass('hidden');
-			$('.menu').addClass('show');
-			$('.openMenuBtn').addClass('hidden');
-			$('.closeMenuBtn').removeClass('hidden');
-		},10)
+		openMenu();
 	})
 	$('.closeMenuBtn').click(()=>{
-		$('.menu').removeClass('show');
-		$('.menu').addClass('hidden');
-		$('.openMenuBtn').removeClass('hidden');
-		$('.closeMenuBtn').addClass('hidden');
-		setTimeout(()=>{
-			$('.menu').removeClass('transition');
-		},300)
+		closeMenu();
 	})
 }
+function closeMenu(){
+	$('.menu').removeClass('show');
+	$('.menu').addClass('hidden');
+	$('.openMenuBtn').removeClass('hidden');
+	$('.closeMenuBtn').addClass('hidden');
+	setTimeout(()=>{
+		$('.menu').removeClass('transition');
+	},300)
+}
 
+function openMenu(){
+	$('.menu').addClass('transition');
+	setTimeout(()=>{
+		$('.menu').removeClass('hidden');
+		$('.menu').addClass('show');
+		$('.openMenuBtn').addClass('hidden');
+		$('.closeMenuBtn').removeClass('hidden');
+	},10)
+}
 function selectWork(){
 	$('.project').hover(()=>{
 		$('.project').removeClass('selected');
-		$('.work-bg-container img').removeClass('selected');
+		$('.bg-container img').removeClass('selected');
 	})
 
 	$('.project.one').hover(()=>{
@@ -58,5 +65,37 @@ function selectWork(){
 	})
 	$('.project.three').hover(()=>{
 		$('.three').addClass('selected');
+	})
+
+	$('.work-type .opt').click(function(){
+		$('.work-type .opt').removeClass('selected');
+		$(this).addClass('selected');
+		if($(this).hasClass("work-opt")){
+			$('.project').removeClass('selected');
+			$('.bg-container img').removeClass('selected');
+			$('.two').addClass('selected'); //focus second project
+			$('#work-section .work-projects').removeClass('hidden');
+			$('#work-section .lab-projects').addClass('hidden');
+			$('#work-section .workOpts').removeClass('hidden');
+			$('#work-section .labOpts').addClass('hidden');
+		}else{
+			$('.project').removeClass('selected');
+			$('.bg-container img').removeClass('selected');
+			$('.one').addClass('selected'); //focus first project
+			$('#work-section .lab-projects').removeClass('hidden');
+			$('#work-section .work-projects').addClass('hidden');
+			$('#work-section .labOpts').removeClass('hidden');
+			$('#work-section .workOpts').addClass('hidden');
+		}
+	})
+}
+
+function menuNav(){
+	$('.menu .opt').click(()=>{
+		closeMenu();
+	})
+	$('.menu-work').click(()=>{
+		$('.section').addClass('hidden')
+		$('#work-section').removeClass('hidden');
 	})
 }

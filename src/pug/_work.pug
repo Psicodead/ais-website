@@ -1,26 +1,40 @@
-#work-section.section.hidden
-	.work-bg-container
-		img.one(src="/assets/images/comefindme.jpg", alt="")
-		img.two.selected(src="/assets/images/monarch.jpg", alt="")
-		img.three(src="/assets/images/carhartt.jpg", alt="")
-	.selector-container
-		.project.one
-			.index 01
-			h2.tag Featured
-			h1.name Come Find Me
-			p.client Terry Crew
-			
-		.project.two.selected 
-			.index 02
-			.tag
-			h1.name Monarch AR
-			p.client Monarch Reign
-		.project.three 
-			.index 03
-			.tag
-			h1.name Augmented Vineyard
-			p.client Carhartt
+#work-section.section
+	.bg-container
+		.workOpts
+			img.one(src="/assets/images/comefindme.jpg", alt="")
+			img.two.selected(src="/assets/images/monarch.jpg", alt="")
+			img.three(src="/assets/images/carhartt.jpg", alt="")
+		.labOpts.hidden
+			img.one.selected(src="/assets/images/comingsoon.png", alt="")
 
+	.selector-container
+		.work-projects.project-container
+			.project.one
+				.index 01
+				h2.tag Featured
+				h1.name Come Find Me
+				p.client Terry Crew
+				
+			.project.two.selected 
+				.index 02
+				.tag
+				h1.name Monarch AR
+				p.client Monarch Reign
+			.project.three 
+				.index 03
+				.tag
+				h1.name Augmented Vineyard
+				p.client Carhartt
+		.lab-projects.project-container.hidden
+			.project.one.selected
+				.index 01
+				h2.tag Featured
+				h1.name Coming soon
+				p.client AR/VR
+	.work-type
+		.container
+			h2.opt.work-opt.selected Work
+			h2.opt.lab-opt Lab
 	//- .work-container
 	//- 	.work initial for debugging
 	//- footer
