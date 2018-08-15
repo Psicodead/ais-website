@@ -73,25 +73,30 @@ function selectWork(){
 		$('.work-type .opt').removeClass('selected');
 		$(this).addClass('selected');
 		if($(this).hasClass("work-opt")){
-			$('.project').removeClass('selected');
-			$('.bg-container img').removeClass('selected');
-			$('.two').addClass('selected'); //focus second project
-			$('#work-section .work-projects').removeClass('hidden');
-			$('#work-section .lab-projects').addClass('hidden');
-			$('#work-section .workOpts').removeClass('hidden');
-			$('#work-section .labOpts').addClass('hidden');
+			showCategoryWork();
 		}else{
-			$('.project').removeClass('selected');
-			$('.bg-container img').removeClass('selected');
-			$('.one').addClass('selected'); //focus first project
-			$('#work-section .lab-projects').removeClass('hidden');
-			$('#work-section .work-projects').addClass('hidden');
-			$('#work-section .labOpts').removeClass('hidden');
-			$('#work-section .workOpts').addClass('hidden');
+			showCategoryLab();
 		}
 	})
 }
-
+function showCategoryWork(){
+	$('.project').removeClass('selected');
+	$('.bg-container img').removeClass('selected');
+	$('.two').addClass('selected'); //focus second project
+	$('#work-section .work-projects').removeClass('hidden');
+	$('#work-section .lab-projects').addClass('hidden');
+	$('#work-section .workOpts').removeClass('hidden');
+	$('#work-section .labOpts').addClass('hidden');
+}
+function showCategoryLab(){
+	$('.project').removeClass('selected');
+	$('.bg-container img').removeClass('selected');
+	$('.one').addClass('selected'); //focus first project
+	$('#work-section .lab-projects').removeClass('hidden');
+	$('#work-section .work-projects').addClass('hidden');
+	$('#work-section .labOpts').removeClass('hidden');
+	$('#work-section .workOpts').addClass('hidden');
+}
 function menuNav(){
 	$('.menu .opt').click(()=>{
 		closeMenu();
@@ -99,5 +104,11 @@ function menuNav(){
 	$('.menu-work').click(()=>{
 		$('.section').addClass('hidden')
 		$('#work-section').removeClass('hidden');
+		showCategoryWork();
+	})
+	$('.menu-lab').click(()=>{
+		$('.section').addClass('hidden')
+		$('#work-section').removeClass('hidden');
+		showCategoryLab();
 	})
 }
