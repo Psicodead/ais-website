@@ -293,10 +293,33 @@ body {
         display: none; }
     body .fixed-ui .closeMenuBtn {
       width: 30rem; }
-  body #about-section .content {
-    background-color: #151515;
-    width: 100%;
-    height: 100%; }
+  body #about-section {
+    padding: 0; }
+    body #about-section .content {
+      padding: 0 80rem;
+      background-color: #151515;
+      width: 100%;
+      height: 100%; }
+      body #about-section .content .lineTitle h1 {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+        color: transparent;
+        font-size: 80rem; }
+      body #about-section .content .aboutText {
+        margin-top: 200rem;
+        width: 100%;
+        background: #fd000022; }
+        body #about-section .content .aboutText p {
+          letter-spacing: 2px; }
+        body #about-section .content .aboutText .highligh {
+          width: 70%;
+          font-size: 35rem;
+          font-family: "KelsonSans", Helvetica, sans-serif, arial; }
+        body #about-section .content .aboutText .copy {
+          font-family: "Roboto", Helvetica, sans-serif, arial;
+          font-weight: normal;
+          font-size: 12rem;
+          width: 40%; }
   body .menu {
     width: 100%;
     height: 100%;
