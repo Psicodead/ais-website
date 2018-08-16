@@ -111,4 +111,8 @@ function menuNav(){
 		$('#work-section').removeClass('hidden');
 		showCategoryLab();
 	})
+	$('.menu-about').click(()=>{
+		$('.section').addClass('hidden')
+		$('#about-section').removeClass('hidden');
+	})
 }

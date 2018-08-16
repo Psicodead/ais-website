@@ -27619,5 +27619,9 @@ function menuNav(){
 		$('#work-section').removeClass('hidden');
 		showCategoryLab();
 	})
+	$('.menu-about').click(()=>{
+		$('.section').addClass('hidden')
+		$('#about-section').removeClass('hidden');
+	})
 }
 },{"./data/project.json":3,"jquery":1,"lodash":2}]},{},[4]);
