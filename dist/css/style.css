@@ -317,10 +317,26 @@ body {
           color: transparent;
           font-size: 110rem;
           letter-spacing: 4px;
+          line-height: 70%;
           margin: 0;
           bottom: 0;
           position: absolute;
           white-space: nowrap; }
+      body #about-section .content p {
+        letter-spacing: 1px; }
+      body #about-section .content .highligh {
+        width: 78%;
+        line-height: 55rem;
+        font-size: 33rem;
+        font-family: "KelsonSans", Helvetica, sans-serif, arial;
+        font-weight: bold;
+        margin-bottom: 100rem; }
+      body #about-section .content .copy {
+        font-family: "Roboto", Helvetica, sans-serif, arial;
+        font-weight: normal;
+        font-size: 16rem;
+        line-height: 35rem;
+        width: 44%; }
       body #about-section .content .aboutText, body #about-section .content .links, body #about-section .content .social {
         padding-left: 12%;
         width: 100%; }
@@ -328,36 +344,50 @@ body {
         margin-top: 230rem;
         padding-bottom: 100rem;
         width: 100%; }
-        body #about-section .content .aboutText p {
-          letter-spacing: 1px; }
-        body #about-section .content .aboutText .highligh {
-          width: 78%;
-          line-height: 55rem;
-          font-size: 33rem;
-          font-family: "KelsonSans", Helvetica, sans-serif, arial;
-          font-weight: bold;
-          margin-bottom: 100rem; }
-        body #about-section .content .aboutText .copy {
-          font-family: "Roboto", Helvetica, sans-serif, arial;
-          font-weight: normal;
-          font-size: 16rem;
-          line-height: 35rem;
-          width: 44%; }
         body #about-section .content .aboutText .lineTitle {
           right: 0;
           bottom: 0; }
-      body #about-section .content .teamPhotos {
+      body #about-section .content .team-container {
         padding-left: 18%;
+        margin-top: 100rem;
         display: flex;
         justify-content: space-between; }
-        body #about-section .content .teamPhotos .leftPhotos, body #about-section .content .teamPhotos .rightPhotos {
+        body #about-section .content .team-container .leftPhotos, body #about-section .content .team-container .rightPhotos {
           display: inline-block;
-          width: 42%; }
-        body #about-section .content .teamPhotos .lineTitle {
+          width: 44%; }
+        body #about-section .content .team-container .team {
+          margin-bottom: 34%; }
+        body #about-section .content .team-container .rightPhotos {
+          padding-top: 12%; }
+        body #about-section .content .team-container .lineTitle {
           left: 0;
-          top: 0; }
-          body #about-section .content .teamPhotos .lineTitle h1 {
-            top: 0;
+          top: 12%; }
+          body #about-section .content .team-container .lineTitle h1 {
+            top: 8rem;
+            right: 0; }
+      body #about-section .content .services-container {
+        padding-left: 3%;
+        padding-right: 12%;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column; }
+        body #about-section .content .services-container .service {
+          width: 49%; }
+          body #about-section .content .services-container .service .icon {
+            margin-bottom: 40rem;
+            padding: 0 24%; }
+          body #about-section .content .services-container .service .highligh, body #about-section .content .services-container .service .copy {
+            margin-bottom: 10rem;
+            width: 100%;
+            text-align: center; }
+          body #about-section .content .services-container .service.ar {
+            align-self: flex-start; }
+          body #about-section .content .services-container .service.vr {
+            align-self: flex-end; }
+        body #about-section .content .services-container .lineTitle {
+          right: 0;
+          top: 10%; }
+          body #about-section .content .services-container .lineTitle h1 {
             right: 0; }
   body .menu {
     width: 100%;
