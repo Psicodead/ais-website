@@ -42,10 +42,13 @@ body{
 		height: 100%;
 		overflow: hidden;
 		.section{
+			//background: none;
 			overflow: hidden;
 			padding: 20px;
 			width: 100%;
 			height: 100%;
+			opacity: 1;
+			@include transition(opacity 300ms);
 			.content{
 				overflow: hidden;
 				width: 100%;
@@ -53,6 +56,14 @@ body{
 			}
 			&.hidden{
 				display: none;
+			}
+			&.transitionIn{
+				display: block;
+				opacity: 1;
+			}
+			&.transitionOut{
+				display: block;
+				opacity: 0;
 			}
 		}
 		

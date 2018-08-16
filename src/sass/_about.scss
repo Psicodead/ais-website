@@ -37,7 +37,7 @@
         p{
             letter-spacing: 1px;
         }
-        .highligh{
+        .highligh, .links .opt{
             width: 78%;
             line-height: 55rem;
             font-size: 33rem;
@@ -94,7 +94,7 @@
             }
         }
         .services-container{
-            padding-left: 3%;
+            padding-left: 5%;
             padding-right: 12%;
             margin-top: 0;
             display: flex;
@@ -124,6 +124,25 @@
                     //top: 8rem;
                     right: 0;
                 }
+            }
+        }
+        .links{
+            margin-top: 100rem;
+            .opt{
+                cursor: pointer;
+                display: block;
+                margin: 0;
+                text-decoration: underline;
+                letter-spacing: 2rem;
+                margin-bottom: 65rem;
+                font-size: 45rem;
+            }
+        }
+        .social{
+            margin-top: 130rem;
+            margin-bottom: 130rem;
+            .sn{
+                margin-right: 40rem;
             }
         }
    }
