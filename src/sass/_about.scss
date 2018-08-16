@@ -8,31 +8,79 @@
         //top: 0;
         width: 100%;
         height: 100%;
+        overflow-y: scroll;
+        .cornerImage{
+            width: 33%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            pointer-events: none;
+        }
         .lineTitle{
+            transform-origin: left center;
+            transform: rotate(-90deg);
+            position: absolute;
             h1{
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: white;
                 color: transparent;
-                font-size: 80rem;
+                font-size: 110rem;
+                letter-spacing: 4px;
+                margin: 0;
+                bottom: 0;
+                position: absolute;
+                white-space: nowrap;
             }
         }
-        .aboutText{
-            margin-top: 200rem;
+        .aboutText, .links, .social{
+            padding-left: 12%;
             width: 100%;
-            background: #fd000022;
+        }
+        .aboutText{
+            margin-top: 230rem;
+            padding-bottom: 100rem;
+            width: 100%;
+            
+            //background: #fd000022;
+
             p{
-                letter-spacing: 2px;
+                letter-spacing: 1px;
             }
             .highligh{
-                width: 70%;
-                font-size: 35rem;
+                width: 78%;
+                line-height: 55rem;
+                font-size: 33rem;
                 font-family: 'KelsonSans', $font-stack;
+                font-weight: bold;
+                margin-bottom: 100rem;
             }
             .copy{
                 font-family: 'Roboto', $font-stack;
                 font-weight: normal;
-                font-size: 12rem;
-                width: 40%;
+                font-size: 16rem;
+                line-height:35rem;
+                width: 44%;
+            }
+            .lineTitle{
+                right: 0;
+                bottom: 0;
+            }
+        }
+        .teamPhotos{
+            padding-left: 18%;
+            display: flex;
+            justify-content: space-between;
+            .leftPhotos, .rightPhotos{
+                display: inline-block;
+                width: 42%;
+            }
+            .lineTitle{
+                left: 0;
+                top: 0;
+                h1{
+                    top: 0;
+                    right: 0;
+                }
             }
         }
    }
