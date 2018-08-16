@@ -105,6 +105,7 @@ function hideSection(tSection){
 	},600);
 }
 function showSection(tSection){
+	//TODO Fix this method!!!
 	//console.log(tSection);
 	tSection.addClass('transitionOut');
 	tSection.removeClass('hidden');
