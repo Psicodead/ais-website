@@ -5,14 +5,14 @@
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="content-wrapper">
+    <div class="body-wrapper">
       <div class="fixed-ui"><a class="logo" href="."><img src="./assets/images/ais_logo.svg"></a>
         <div class="isotipo"><img src="./assets/images/ais_isotipo.svg" alt=""></div>
         <div class="openMenuBtn"><img src="./assets/images/icon_menu.svg"></div>
         <div class="closeMenuBtn hidden"><img src="./assets/images/icon_x_menu.svg"></div>
         <div class="scrollbar"></div>
       </div>
-      <div class="section hidden" id="landing-section">
+      <div class="section" id="landing-section">
         <div class="content">
           <div class="feature-work">
             <div class="info-wrapper">
@@ -43,19 +43,19 @@
           </div>
           <div class="selector-container">
             <div class="work-projects project-container">
-              <div class="project one">
+              <div class="project one" data-link="#come-find-me">
                 <div class="index">01</div>
                 <h2 class="tag">Featured</h2>
                 <h1 class="name">Come Find Me</h1>
                 <p class="client">Terry Crews</p>
               </div>
-              <div class="project two selected"> 
+              <div class="project two selected" data-link="#monarch"> 
                 <div class="index">02</div>
                 <div class="tag"></div>
                 <h1 class="name">Monarch AR</h1>
                 <p class="client">Monarch Reign</p>
               </div>
-              <div class="project three"> 
+              <div class="project three" data-link="#carhartt"> 
                 <div class="index">03</div>
                 <div class="tag"></div>
                 <h1 class="name">Augmented Vineyard</h1>
@@ -131,7 +131,7 @@
           <div class="container rotated"><a class="sn facebook" href="https://www.facebook.com/augmentedislandstudios/?ref=br_rs" target="_blank">Facebook</a><a class="sn instagram" href="https://www.instagram.com/augmentedislandstudios/?hl=en" target="_blank">Instagram</a><a class="sn linkedin" href="https://www.linkedin.com/company/augmented-island-studios/" target="_blank">Linkedin</a></div>
         </div>
       </div>
-      <div class="work section" id="come-find-me">
+      <div class="work-detail section hidden" id="come-find-me">
         <div class="content">
           <div class="contentWrapper">
             <div class="projectLogo"><img src="./assets/images/cfm_logo.svg" alt=""></div>
@@ -140,6 +140,48 @@
               <h2 class="client">Terry Crews</h2>
               <p class="description">
                 Sharing a quote from our client Terry Crews: "20 years ago, 1995 to be exact, Ken Harvey and I were teammates on the NFL’s Washington Redskins. Ken came to me with a brilliant idea of a book he wrote for his two very young sons, Anthony and Marcus. The book was to be a first time reader, and feature the boys in an imaginative game of hide and seek.
+                
+              </p>
+            </div>
+            <div class="photoWrapper"><img class="workPhoto" src="./assets/images/placeholder_image.png" alt=""></div>
+            <div class="goBack btn">
+              <div class="container rotated">
+                <h2>Go Back</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="work-detail section hidden" id="carhartt">
+        <div class="content">
+          <div class="contentWrapper">
+            <div class="projectLogo"><img src="./assets/images/cfm_logo.svg" alt=""></div>
+            <div class="copyWrapper">
+              <h1 class="title">Augmented Vineyard</h1>
+              <h2 class="client">Carhartt</h2>
+              <p class="description">
+                We partnered with the legendary Carhartt family and their beautiful winery, Carhartt Vineyard, to bring to life the first ever augmented reality wine application in Santa Barbara county. More specifically, in the beautiful Santa Ynez Valley. An idea surged within our company to change the wine tasting room experience and offer an innovative and informative application which could be enjoyed inside but also, outside the wine tasting room. A floating bottle of Sangiovese more than meets the eye.
+                
+              </p>
+            </div>
+            <div class="photoWrapper"><img class="workPhoto" src="./assets/images/placeholder_image.png" alt=""></div>
+            <div class="goBack btn">
+              <div class="container rotated">
+                <h2>Go Back</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="work-detail section hidden" id="monarch">
+        <div class="content">
+          <div class="contentWrapper">
+            <div class="projectLogo"><img src="./assets/images/cfm_logo.svg" alt=""></div>
+            <div class="copyWrapper">
+              <h1 class="title">Monarch AR</h1>
+              <h2 class="client">Monar Reign Swimwear</h2>
+              <p class="description">
+                Celebrity fashion designer Ashley Busch, wife of famed NASCAR champion Kurt Busch, chose us to launch the first AR project for her new brand, Monarch Reign (www.monarchreign.com). The luxurious swim and accessories brand needed us to bring her logo to life in a beautiful and entertaining way. The color rich butterfly interaction, mixed with the subtle softness of their flight deliver a brand message like no other; one of thoughtful design and love for clean and interesting aesthetics.
                 
               </p>
             </div>

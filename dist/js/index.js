@@ -27529,7 +27529,7 @@ $(document).ready(()=>{
 	createProjects();
 	menuControl();
 	selectWork();
-	menuNav();
+	nav();
 })
 
 function menuControl(){
@@ -27576,6 +27576,14 @@ function selectWork(){
 	$('.project.three').hover(()=>{
 		$('.three').addClass('selected');
 	})
+
+	$('.project').click(function(){
+		hideSection($('.section').not('.hidden'));
+		setTimeout(()=>{
+			showSection($($(this)[0].getAttribute("data-link")));
+		},300)
+	})
+
 
 	$('.work-type .opt').click(function(){
 		$('.work-type .opt').removeClass('selected');
@@ -27626,7 +27634,7 @@ function showSection(tSection){
 		tSection.addClass('show');
 	},20);
 }
-function menuNav(){
+function nav(){
 	$('.menu .opt').click(()=>{
 		setTimeout(()=>{
 			closeMenu();
@@ -27658,6 +27666,13 @@ function menuNav(){
 	})
 	$('.menu-contact').click(()=>{
 		
+	})
+	$('.goBack .container').click(()=>{
+		hideSection($('.section').not('#work-section').not('.hidden'));
+		setTimeout(()=>{
+			showSection($('#work-section'));
+		},300)
+		showCategoryWork();
 	})
 }
 },{"./data/project.json":3,"jquery":1,"lodash":2}]},{},[4]);

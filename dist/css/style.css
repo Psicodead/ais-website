@@ -60,11 +60,11 @@ body {
   body a {
     text-decoration: none;
     color: white; }
-  body .content-wrapper {
+  body .body-wrapper {
     width: 100%;
     height: 100%;
     overflow: hidden; }
-    body .content-wrapper .section {
+    body .body-wrapper .section {
       overflow: hidden;
       display: block;
       padding: 20px;
@@ -75,19 +75,19 @@ body {
       -o-transition: opacity 300ms;
       -webkit-transition: opacity 300ms;
       transition: opacity 300ms; }
-      body .content-wrapper .section .content {
+      body .body-wrapper .section .content {
         overflow: hidden;
         width: 100%;
         height: 100%; }
-      body .content-wrapper .section.hidden {
+      body .body-wrapper .section.hidden {
         display: none; }
-      body .content-wrapper .section.show {
+      body .body-wrapper .section.show {
         display: block;
         opacity: 1; }
-      body .content-wrapper .section.transitionOut {
+      body .body-wrapper .section.transitionOut {
         display: block;
         opacity: 0; }
-    body .content-wrapper .rotated {
+    body .body-wrapper .rotated {
       -moz-transform: rotate(-90deg);
       -o-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
@@ -465,58 +465,61 @@ body {
         body .menu .social .container a {
           color: white;
           margin-right: 30rem; }
-  body #come-find-me .content {
-    padding-top: 100rem;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column; }
-    body #come-find-me .content .contentWrapper {
-      width: 70%;
+  body .work-detail.section {
+    padding: 0; }
+    body .work-detail.section .content {
+      padding-top: 150rem;
+      width: 100%;
       height: 100%;
+      overflow-y: scroll;
       display: flex;
-      flex-direction: column;
-      margin: 0 auto; }
-      body #come-find-me .content .contentWrapper div {
+      flex-direction: column; }
+      body .work-detail.section .content .contentWrapper {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
         margin: 0 auto; }
-      body #come-find-me .content .contentWrapper .projectLogo {
-        width: 8%; }
-      body #come-find-me .content .contentWrapper .copyWrapper {
-        text-align: center;
-        width: 60%;
-        margin-top: 40rem; }
-        body #come-find-me .content .contentWrapper .copyWrapper h1, body #come-find-me .content .contentWrapper .copyWrapper h2, body #come-find-me .content .contentWrapper .copyWrapper p {
-          margin: 0;
-          letter-spacing: 1rem; }
-        body #come-find-me .content .contentWrapper .copyWrapper .title {
-          font-size: 80rem; }
-        body #come-find-me .content .contentWrapper .copyWrapper .client {
-          font-size: 15rem; }
-        body #come-find-me .content .contentWrapper .copyWrapper .description {
-          margin-top: 50rem;
-          line-height: 20rem; }
-      body #come-find-me .content .contentWrapper .photoWrapper {
-        margin-top: 100rem; }
-      body #come-find-me .content .contentWrapper .goBack {
-        position: fixed;
-        left: 80rem;
-        top: 50%; }
-        body #come-find-me .content .contentWrapper .goBack .container {
-          left: 20rem;
-          cursor: pointer; }
-        body #come-find-me .content .contentWrapper .goBack h2 {
-          line-height: 20rem; }
-          body #come-find-me .content .contentWrapper .goBack h2::after, body #come-find-me .content .contentWrapper .goBack h2:after {
-            content: " ";
-            -moz-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            width: 60%;
-            position: absolute;
-            bottom: -5rem;
-            left: 48%;
-            background-color: white;
-            height: 1rem; }
+        body .work-detail.section .content .contentWrapper div {
+          margin: 0 auto; }
+        body .work-detail.section .content .contentWrapper .projectLogo {
+          width: 8%; }
+        body .work-detail.section .content .contentWrapper .copyWrapper {
+          text-align: center;
+          width: 60%;
+          margin-top: 40rem; }
+          body .work-detail.section .content .contentWrapper .copyWrapper h1, body .work-detail.section .content .contentWrapper .copyWrapper h2, body .work-detail.section .content .contentWrapper .copyWrapper p {
+            margin: 0;
+            letter-spacing: 1rem; }
+          body .work-detail.section .content .contentWrapper .copyWrapper .title {
+            font-size: 80rem; }
+          body .work-detail.section .content .contentWrapper .copyWrapper .client {
+            font-size: 15rem; }
+          body .work-detail.section .content .contentWrapper .copyWrapper .description {
+            margin-top: 50rem;
+            line-height: 20rem; }
+        body .work-detail.section .content .contentWrapper .photoWrapper {
+          margin-top: 100rem; }
+        body .work-detail.section .content .contentWrapper .goBack {
+          position: fixed;
+          left: 80rem;
+          top: 50%; }
+          body .work-detail.section .content .contentWrapper .goBack .container {
+            left: 20rem;
+            cursor: pointer; }
+          body .work-detail.section .content .contentWrapper .goBack h2 {
+            line-height: 20rem;
+            font-size: 15rem; }
+            body .work-detail.section .content .contentWrapper .goBack h2::after, body .work-detail.section .content .contentWrapper .goBack h2:after {
+              content: " ";
+              -moz-transform: translate(-50%, -50%);
+              -o-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+              width: 60%;
+              position: absolute;
+              bottom: -5rem;
+              left: 48%;
+              background-color: white;
+              height: 1rem; }
