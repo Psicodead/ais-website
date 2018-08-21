@@ -1,7 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var pug = require('gulp-pug');
-var browserify = require('browserify');
+var babelify = require('babelify');
+var browserify = require("browserify");
 var source = require('vinyl-source-stream');
 var connect = require('gulp-connect');
 
@@ -54,7 +55,9 @@ gulp.task('convert', function(){
 });
 
  gulp.task('browserify', function() {
-    return browserify('src/js/index.js').bundle()
+    return browserify({entries: ['src/js/index.js']}).transform(babelify.configure({
+        presets : ["es2015"]
+        })).bundle()
         // vinyl-source-stream makes the bundle compatible with gulp
         .pipe(source('index.js')) // Desired filename
         // Output the file
