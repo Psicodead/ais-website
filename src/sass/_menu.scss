@@ -58,13 +58,9 @@
 		right: 80rem;
 		position: absolute;
 		bottom: 100rem;
-		.container{
-			
+		.container{		
 			position: absolute;
 			bottom: 0;
-			
-			@include transform(rotate(-90deg));
-			transform-origin: bottom left;
 			a{
 				color: white;
 				margin-right: 30rem;

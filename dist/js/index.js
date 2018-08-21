@@ -27606,20 +27606,25 @@ function showCategoryLab(){
 	$('#work-section .workOpts').addClass('hidden');
 }
 function hideSection(tSection){
+	tSection.removeClass('show');
 	tSection.addClass('transitionOut');
 	setTimeout(()=>{
-		tSection.removeClass('transitionOut');
 		tSection.addClass('hidden');
+		tSection.removeClass('transitionOut');
 	},600);
 }
 function showSection(tSection){
 	//TODO Fix this method!!!
 	//console.log(tSection);
 	tSection.addClass('transitionOut');
-	tSection.removeClass('hidden');
+	//tSection.removeClass('hidden');
+	setTimeout(()=>{
+		tSection.removeClass('hidden');	
+	},10);
 	setTimeout(()=>{
 		tSection.removeClass('transitionOut');
-	},100);
+		tSection.addClass('show');
+	},20);
 }
 function menuNav(){
 	$('.menu .opt').click(()=>{

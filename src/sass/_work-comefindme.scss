@@ -1,0 +1,73 @@
+#come-find-me{
+	.content{
+		padding-top: 100rem;
+		//background-color: $darkGrey;
+		//position: absolute;
+		//left: 0;
+		//top: 0;
+		width: 100%;
+		height: 100%;
+		overflow-y: scroll;
+		display: flex;
+		flex-direction: column;
+		.contentWrapper{
+			width: 70%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			margin: 0 auto;
+			div{
+				margin: 0 auto;
+			}
+			.projectLogo{
+				width: 8%;
+			}
+			.copyWrapper{
+				text-align: center;
+				width: 60%;
+				margin-top: 40rem;
+				h1,h2,p{
+					margin: 0;
+					letter-spacing: 1rem;
+					//white-space: nowrap;
+				}
+				.title{
+					font-size: 80rem;
+				}
+				.client{
+					font-size: 15rem;
+				}
+				.description{
+					margin-top: 50rem;
+					line-height: 20rem;
+				}
+			}
+			.photoWrapper{
+				margin-top: 100rem;
+			}
+			.goBack{
+				position: fixed;
+				left: 80rem;
+				top: 50%;
+				.container{
+					left: 20rem;
+					cursor: pointer;
+				}
+				h2{
+					line-height: 20rem;
+					&::after, &:after{
+						content: " ";
+						@include transform(translate(-50%, -50%));
+						width: 60%;
+						position: absolute;
+						bottom: -5rem;
+						left: 48%;
+						background-color: white;
+						height: 1rem;
+					} 
+				}
+			}
+		}
+		
+	}
+}

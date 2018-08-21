@@ -98,8 +98,6 @@
 			bottom: 0;
 			left: 0;
 			white-space: nowrap;
-			transform-origin: bottom left;
-			@include transform(rotate(-90deg));
 			.opt{
 				cursor: pointer;
 				display: inline-block;
