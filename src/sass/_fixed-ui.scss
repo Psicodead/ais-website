@@ -54,4 +54,17 @@
 	.closeMenuBtn{
 		width: 30rem;
 	}
+	//mobile
+	@media (min-width: 320px) and (max-width: 740px){
+		.logo{
+			left: 40px;
+		}
+		.isotipo{
+			left: 100px;
+			display: none;
+		}
+		.closeMenuBtn, .openMenuBtn{
+			right: 40px;
+		}
+	}
 }

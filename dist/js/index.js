@@ -35555,8 +35555,11 @@ function closeMenu() {
 	$('.openMenuBtn').removeClass('hidden');
 	$('.closeMenuBtn').addClass('hidden');
 	$('.isotipo').removeClass('show');
+
 	setTimeout(function () {
 		$('.menu').removeClass('transition');
+		TweenLite.killTweensOf('.menu .opt');
+		TweenLite.set('.menu .opt', { clearProps: "all" });
 	}, 300);
 }
 

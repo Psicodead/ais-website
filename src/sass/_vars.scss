@@ -1,7 +1,8 @@
 //@import "../../node_modules/awesome-sass-easing/_sass-easing.scss";
 $font-stack: Helvetica, sans-serif, arial;
-$darkBlue: #001323;
 $darkGrey: #151515;
+$darkBlue : $darkGrey;
+//$darkBlue: #001323;
 $mainfontsize: 13pt;
 $width:100%;
 $grey: #bbbbbb;

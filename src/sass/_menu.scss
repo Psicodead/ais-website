@@ -67,4 +67,26 @@
 			}
 		}
 	}
+	@media (min-width: 320px) and (max-width: 740px){
+		.options{
+			padding-top: 50rem;
+			top: 50%;
+			bottom: auto;
+			left: 40rem;
+			@include transform(translateY(-50%));
+			
+			.opt{
+				margin: 25rem 0;
+			}
+		}
+		.social{
+			display: none;
+		}
+	}
 }
+
+//
+// top: 50%;
+// transform: translateY(-50%);
+
+//opt     margin: 35rem 0;
