@@ -67,4 +67,40 @@
 			}
 		}
 	}
+	@media (max-width: 800px) {
+		.feature-work{
+			.info-wrapper{
+				.titles{
+					.tag{
+						//letter-spacing: 1rem;
+						font-size: 25rem;
+						//margin-bottom: 7rem;
+					}
+					h1{
+						font-size: 75rem;
+					}
+					//margin: 30rem 0 25rem 0;
+				}
+			}
+		}
+	}
+	
+	@media (min-width: 320px) and (max-width: 740px){
+		.feature-work{
+			.info-wrapper{
+				left: 30rem;
+				.titles{
+					.tag{
+						letter-spacing: 1rem;
+						font-size: 12rem;
+						margin-bottom: 7rem;
+					}
+					h1{
+						font-size: 30rem;
+					}
+					//margin: 30rem 0 25rem 0;
+				}
+			}
+		}
+	}
 }

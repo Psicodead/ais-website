@@ -150,6 +150,20 @@ body {
             vertical-align: middle;
             margin-left: 5rem;
             width: 10rem; }
+    @media (max-width: 800px) {
+      body #landing-section .feature-work .info-wrapper .titles .tag {
+        font-size: 25rem; }
+      body #landing-section .feature-work .info-wrapper .titles h1 {
+        font-size: 75rem; } }
+    @media (min-width: 320px) and (max-width: 740px) {
+      body #landing-section .feature-work .info-wrapper {
+        left: 30rem; }
+        body #landing-section .feature-work .info-wrapper .titles .tag {
+          letter-spacing: 1rem;
+          font-size: 12rem;
+          margin-bottom: 7rem; }
+        body #landing-section .feature-work .info-wrapper .titles h1 {
+          font-size: 30rem; } }
   body #work-section {
     width: 100%;
     height: 100%; }
