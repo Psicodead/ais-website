@@ -70,6 +70,52 @@
 				}
 			}
 		}
-		
+	}
+
+	 //mobile
+	 @media (min-width: 320px) and (max-width: 740px){
+		.content{
+			padding-top: 110rem;
+			.contentWrapper{
+				width: 100%;
+				.projectLogo{
+					width: 30%;
+					display: none;
+				}
+				.copyWrapper{
+					width: 100%;
+					padding: 0 40rem;
+					text-align: left;
+					.title{
+						font-size: 40rem;
+					}
+				}
+				.photoWrapper{
+					margin-top: 50rem;
+					.workPhoto{	
+						width: 100%;
+						left: 50%;
+						@include transform(translateX(-50%));
+					}					
+				}
+				.goBack{
+					left: 52%;
+					top: 50rem;
+					@include transform(translateX(-50%));
+					.container{
+						@include transform(none);
+						left: 0;
+						h2{
+							&:after, &::after{
+								display: none;
+							}
+							margin: 7px;
+							letter-spacing: 4px;
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
 	}
 }

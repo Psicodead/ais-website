@@ -631,3 +631,48 @@ body {
               left: 48%;
               background-color: white;
               height: 1rem; }
+    @media (min-width: 320px) and (max-width: 740px) {
+      body .work-detail.section .content {
+        padding-top: 110rem; }
+        body .work-detail.section .content .contentWrapper {
+          width: 100%; }
+          body .work-detail.section .content .contentWrapper .projectLogo {
+            width: 30%;
+            display: none; }
+          body .work-detail.section .content .contentWrapper .copyWrapper {
+            width: 100%;
+            padding: 0 40rem;
+            text-align: left; }
+            body .work-detail.section .content .contentWrapper .copyWrapper .title {
+              font-size: 40rem; }
+          body .work-detail.section .content .contentWrapper .photoWrapper {
+            margin-top: 50rem; }
+            body .work-detail.section .content .contentWrapper .photoWrapper .workPhoto {
+              width: 100%;
+              left: 50%;
+              -moz-transform: translateX(-50%);
+              -o-transform: translateX(-50%);
+              -ms-transform: translateX(-50%);
+              -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); }
+          body .work-detail.section .content .contentWrapper .goBack {
+            left: 52%;
+            top: 50rem;
+            -moz-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+            body .work-detail.section .content .contentWrapper .goBack .container {
+              -moz-transform: none;
+              -o-transform: none;
+              -ms-transform: none;
+              -webkit-transform: none;
+              transform: none;
+              left: 0; }
+              body .work-detail.section .content .contentWrapper .goBack .container h2 {
+                margin: 7px;
+                letter-spacing: 4px;
+                text-align: center; }
+                body .work-detail.section .content .contentWrapper .goBack .container h2:after, body .work-detail.section .content .contentWrapper .goBack .container h2::after {
+                  display: none; } }
