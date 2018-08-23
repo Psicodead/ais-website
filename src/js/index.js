@@ -1,7 +1,7 @@
 var lodash = require('lodash');
 var $ = require('jquery');
 var json = require('./data/project.json'); //with path
-
+import { TweenMax, TimelineLite, Power4, Power3, Linear, Elastic, CSSPlugin, ScrollToPlugin} from 'gsap';
 //var mJson = JSON.parse(json);
 console.log("json",json.projects);
 function createProjects(){
@@ -21,7 +21,7 @@ $(document).ready(()=>{
 	createProjects();
 	menuControl();
 	selectWork();
-	menuNav();
+	nav();
 })
 
 function menuControl(){
@@ -52,6 +52,9 @@ function openMenu(){
 		$('.openMenuBtn').addClass('hidden');
 		$('.closeMenuBtn').removeClass('hidden');
 	},10)
+	setTimeout(()=>{
+		UIAnimations();
+	},10)
 }
 function selectWork(){
 	$('.project').hover(()=>{
@@ -68,6 +71,14 @@ function selectWork(){
 	$('.project.three').hover(()=>{
 		$('.three').addClass('selected');
 	})
+
+	$('.project').click(function(){
+		hideSection($('.section').not('.hidden'));
+		setTimeout(()=>{
+			showSection($($(this)[0].getAttribute("data-link")));
+		},300)
+	})
+
 
 	$('.work-type .opt').click(function(){
 		$('.work-type .opt').removeClass('selected');
@@ -113,12 +124,10 @@ function showSection(tSection){
 	setTimeout(()=>{
 		tSection.removeClass('hidden');	
 	},10);
-	setTimeout(()=>{
-		tSection.removeClass('transitionOut');
-		tSection.addClass('show');
-	},20);
+	tSection.removeClass('transitionOut');
+	tSection.addClass('show');
 }
-function menuNav(){
+function nav(){
 	$('.menu .opt').click(()=>{
 		setTimeout(()=>{
 			closeMenu();
@@ -150,5 +159,20 @@ function menuNav(){
 	})
 	$('.menu-contact').click(()=>{
 		
+	})
+	$('.goBack .container').click(()=>{
+		hideSection($('.section').not('#work-section').not('.hidden'));
+		setTimeout(()=>{
+			showSection($('#work-section'));
+		},300)
+		showCategoryWork();
+	})
+}
+
+function UIAnimations(){
+	var menu = $('.menu');
+	var options = menu.find('.opt');
+	$.each(options, function(i,val){
+		TweenLite.from(options[i],0.6,{left:"-40rem", opacity: 0, delay:0.2+(i*0.2)})
 	})
 }

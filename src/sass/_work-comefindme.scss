@@ -1,6 +1,7 @@
-#come-find-me{
+.work-detail.section{
+	padding: 0;
 	.content{
-		padding-top: 100rem;
+		padding-top: 150rem;
 		//background-color: $darkGrey;
 		//position: absolute;
 		//left: 0;
@@ -55,6 +56,7 @@
 				}
 				h2{
 					line-height: 20rem;
+					font-size: 15rem;
 					&::after, &:after{
 						content: " ";
 						@include transform(translate(-50%, -50%));
