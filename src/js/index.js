@@ -73,8 +73,12 @@ function selectWork(){
 	})
 
 	$('.project').click(function(){
-		hideSection($('.section').not('.hidden'));
+		
 		setTimeout(()=>{
+			//console.log('datalink',$(this)[0].getAttribute("data-link"))
+			if(!$(this)[0].getAttribute("data-link"))
+				return
+			hideSection($('.section').not('.hidden'));
 			showSection($($(this)[0].getAttribute("data-link")));
 		},300)
 	})

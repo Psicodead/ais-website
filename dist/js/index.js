@@ -35592,8 +35592,10 @@ function selectWork() {
 	$('.project').click(function () {
 		var _this = this;
 
-		hideSection($('.section').not('.hidden'));
 		setTimeout(function () {
+			//console.log('datalink',$(this)[0].getAttribute("data-link"))
+			if (!$(_this)[0].getAttribute("data-link")) return;
+			hideSection($('.section').not('.hidden'));
 			showSection($($(_this)[0].getAttribute("data-link")));
 		}, 300);
 	});
