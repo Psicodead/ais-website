@@ -439,6 +439,77 @@ body {
         margin-bottom: 130rem; }
         body #about-section .content .social .sn {
           margin-right: 40rem; }
+    @media (min-width: 320px) and (max-width: 740px) {
+      body #about-section .content {
+        padding: 0 40rem; }
+        body #about-section .content .cornerImage {
+          display: none; }
+        body #about-section .content .lineTitle {
+          position: relative;
+          margin-bottom: 50rem;
+          -moz-transform: none;
+          -o-transform: none;
+          -ms-transform: none;
+          -webkit-transform: none;
+          transform: none; }
+          body #about-section .content .lineTitle h1 {
+            -moz-transform: none;
+            -o-transform: none;
+            -ms-transform: none;
+            -webkit-transform: none;
+            transform: none;
+            position: relative;
+            -webkit-text-stroke-width: 0.5px;
+            font-size: 45rem; }
+        body #about-section .content .aboutText {
+          padding: 0;
+          margin-top: 170rem; }
+        body #about-section .content .highligh, body #about-section .content .copy {
+          width: 100%;
+          font-size: 15rem;
+          letter-spacing: 0.5px;
+          line-height: 25rem; }
+        body #about-section .content .highligh {
+          margin-bottom: 50rem; }
+        body #about-section .content .copy {
+          font-size: 13rem; }
+        body #about-section .content .services-container {
+          padding: 0;
+          margin-top: 70rem; }
+          body #about-section .content .services-container .service {
+            width: 100%; }
+            body #about-section .content .services-container .service .icon {
+              padding: 0 15%; }
+            body #about-section .content .services-container .service.vr {
+              padding-top: 40rem; }
+        body #about-section .content .team-container {
+          display: block;
+          margin-top: 70rem;
+          padding: 0; }
+          body #about-section .content .team-container .team {
+            margin-bottom: 4%; }
+          body #about-section .content .team-container .lineTitle {
+            text-align: right; }
+          body #about-section .content .team-container .leftPhotos, body #about-section .content .team-container .rightPhotos {
+            vertical-align: top;
+            width: 49%; }
+          body #about-section .content .team-container .rightPhotos {
+            padding-top: 6%; }
+        body #about-section .content .links {
+          padding: 0;
+          margin-top: 40rem; }
+          body #about-section .content .links .opt {
+            width: 100%;
+            font-size: 24rem;
+            margin-bottom: 0; }
+        body #about-section .content .social {
+          margin-top: 50rem;
+          margin-bottom: 70rem;
+          padding: 0;
+          display: flex;
+          justify-content: space-around; }
+          body #about-section .content .social .sn {
+            margin: 0; } }
   body .menu {
     width: 100%;
     height: 100%;

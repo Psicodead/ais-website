@@ -146,4 +146,95 @@
             }
         }
    }
+   //mobile
+	@media (min-width: 320px) and (max-width: 740px){
+        .content{
+            padding: 0 40rem;
+            
+            .cornerImage{
+                display: none;
+            }
+            
+            .lineTitle{
+                position: relative;
+                margin-bottom: 50rem;
+                
+                @include transform(none);
+                h1{
+                    @include transform(none);
+                    position: relative;
+                    -webkit-text-stroke-width: 0.5px;
+                    font-size: 45rem;
+                }
+            }
+
+            .aboutText{
+                padding: 0;
+                margin-top: 170rem;
+            }
+            
+            .highligh, .copy{
+                width: 100%;
+                font-size: 15rem;
+                letter-spacing: 0.5px;
+                line-height: 25rem;
+            }
+            .highligh{
+                margin-bottom: 50rem;
+            }
+            .copy{
+                font-size: 13rem;
+            }
+            .services-container{
+                padding: 0;
+                margin-top: 70rem;
+                .service{
+                    width: 100%;
+                    .icon{
+                        padding: 0 15%;
+                    }
+                    &.vr{
+                        padding-top: 40rem;
+                    }
+                }
+            }
+            .team-container{
+                display: block;
+                margin-top: 70rem;
+                padding: 0;
+                .team{
+                    margin-bottom: 4%;
+                }
+                .lineTitle{
+                    text-align: right;
+                }
+                .leftPhotos, .rightPhotos{
+                    vertical-align: top;
+                    width: 49%;
+                }
+                .rightPhotos{
+                    padding-top: 6%;
+                }
+            }
+            .links{
+                padding: 0;
+                margin-top: 40rem;
+                .opt{
+                    width: 100%;
+                    font-size: 24rem;
+                    margin-bottom: 0;
+                }
+            }
+            .social{
+                margin-top: 50rem;
+                margin-bottom: 70rem;
+                padding: 0;
+                display: flex;
+                justify-content: space-around;
+                .sn{
+                    margin: 0;
+                }
+            }
+        }
+    }
 }
