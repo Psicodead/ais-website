@@ -1,6 +1,7 @@
 var lodash = require('lodash');
 var $ = require('jquery');
 var json = require('./data/project.json'); //with path
+var tempUri = window.location.hash;
 import { TweenMax, TimelineLite, Power4, Power3, Linear, Elastic, CSSPlugin, ScrollToPlugin} from 'gsap';
 //var mJson = JSON.parse(json);
 console.log("json",json.projects);
@@ -18,10 +19,13 @@ function createProjects(){
 }
 
 $(document).ready(()=>{
+	tempUri = window.location.hash;
 	createProjects();
 	menuControl();
 	selectWork();
 	nav();
+	checkURL();
+	renderContent(tempUri);
 })
 
 function menuControl(){
@@ -176,6 +180,70 @@ function nav(){
 	})
 }
 
+function checkURL(){
+	window.onpopstate = function(event) {
+		tempUri = window.location.hash;
+		console.log('url', tempUri);
+		renderContent(tempUri);
+		//console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+	};
+	// var tempUri = window.location.pathname;
+	// Console.log('url', tempUri);
+	
+}
+
+function renderContent(uri){
+	switch(uri){
+		case '#aboutus':
+			hideSection($('.section').not('#about-section').not('.hidden'));
+			setTimeout(()=>{
+				showSection($('#about-section'));
+			},300)
+		break;
+		case '#work':
+			hideSection($('.section').not('#work-section').not('.hidden'));
+			setTimeout(()=>{
+				showSection($('#work-section'));
+			},300)
+		break;
+		case '#comefindme':
+			hideSection($('.section').not('#come-find-me').not('.hidden'));
+			setTimeout(()=>{
+				showSection($('#come-find-me'));
+			},300)
+		break;
+		case '#carhartt':
+			hideSection($('.section').not('#carhartt').not('.hidden'));
+			setTimeout(()=>{
+				showSection($('#carhartt'));
+			},300)
+		break;
+		case '#monarch':
+		hideSection($('.section').not('#monarch').not('.hidden'));
+		setTimeout(()=>{
+			showSection($('#monarch'));
+		},300)
+		break;
+		case '#contact':
+			hideSection($('.section').not('#work-section').not('.hidden'));
+			setTimeout(()=>{
+				showSection($('#work-section'));
+			},300)
+		break;
+		case '#':
+			hideSection($('.section').not('#landing-section').not('.hidden'));
+			setTimeout(()=>{
+				showSection($('#landing-section'));
+			},300)
+		break;
+		case '#landing':
+			hideSection($('.section').not('#landing-section').not('.hidden'));
+			setTimeout(()=>{
+				showSection($('#landing-section'));
+			},300)
+		break;
+	}
+}
 function UIAnimations(){
 	var menu = $('.menu');
 	var options = menu.find('.opt');
