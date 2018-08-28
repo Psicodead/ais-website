@@ -46,7 +46,7 @@ gulp.watch('src/assets/audio/**.{mp3,wav,mp4,wv}', ['copyaudios'])
 });
 
 gulp.task('convert', function(){
-  return gulp.src(['src/pug/**.pug','src/pug/_*.pug'])
+  return gulp.src(['src/pug/**.pug','!src/pug/_*.pug'])
   .pipe(pug({
     pretty: true
   }))
