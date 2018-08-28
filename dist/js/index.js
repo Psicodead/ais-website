@@ -35522,6 +35522,7 @@ var tempUri = window.location.hash;
 
 //var mJson = JSON.parse(json);
 console.log("json", json.projects);
+
 function createProjects() {
 	for (var i = json.projects.work.length - 1; i >= 0; i--) {
 		//json.projects.work[i]
@@ -35537,7 +35538,8 @@ function createProjects() {
 
 $(document).ready(function () {
 	tempUri = window.location.hash;
-	createProjects();
+	console.log('code ready');
+	//createProjects();
 	menuControl();
 	selectWork();
 	nav();
@@ -35706,6 +35708,7 @@ function checkURL() {
 }
 
 function renderContent(uri) {
+	console.log('rendering url', uri);
 	switch (uri) {
 		case '#aboutus':
 			hideSection($('.section').not('#about-section').not('.hidden'));

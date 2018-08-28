@@ -5,6 +5,7 @@ var tempUri = window.location.hash;
 import { TweenMax, TimelineLite, Power4, Power3, Linear, Elastic, CSSPlugin, ScrollToPlugin} from 'gsap';
 //var mJson = JSON.parse(json);
 console.log("json",json.projects);
+
 function createProjects(){
 	for (var i = json.projects.work.length - 1; i >= 0; i--) {
 		//json.projects.work[i]
@@ -20,12 +21,14 @@ function createProjects(){
 
 $(document).ready(()=>{
 	tempUri = window.location.hash;
-	createProjects();
+	console.log('code ready');
+	//createProjects();
 	menuControl();
 	selectWork();
 	nav();
 	checkURL();
 	renderContent(tempUri);
+	
 })
 
 function menuControl(){
@@ -193,6 +196,7 @@ function checkURL(){
 }
 
 function renderContent(uri){
+	console.log('rendering url', uri);
 	switch(uri){
 		case '#aboutus':
 			hideSection($('.section').not('#about-section').not('.hidden'));
