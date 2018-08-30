@@ -69,7 +69,7 @@ function openMenu(){
 function selectWork(){
 	$('.project').hover(()=>{
 		$('.project').removeClass('selected');
-		$('.bg-container img').removeClass('selected');
+		$('.bg-container .bg').removeClass('selected');
 	})
 
 	$('.project.one').hover(()=>{
@@ -106,7 +106,7 @@ function selectWork(){
 }
 function showCategoryWork(){
 	$('.project').removeClass('selected');
-	$('.bg-container img').removeClass('selected');
+	$('.bg-container .bg').removeClass('selected');
 	$('.two').addClass('selected'); //focus second project
 	$('#work-section .work-projects').removeClass('hidden');
 	$('#work-section .lab-projects').addClass('hidden');
@@ -115,7 +115,7 @@ function showCategoryWork(){
 }
 function showCategoryLab(){
 	$('.project').removeClass('selected');
-	$('.bg-container img').removeClass('selected');
+	$('.bg-container .bg').removeClass('selected');
 	$('.one').addClass('selected'); //focus first project
 	$('#work-section .lab-projects').removeClass('hidden');
 	$('#work-section .work-projects').addClass('hidden');
@@ -148,7 +148,7 @@ function showSection(tSection){
 			resolve();
 		},200);
 	});
-	
+
 	Promise.all([transOut,removeHidden]).then(()=>{
 		tSection.addClass('show');
 		tSection.removeClass('transitionOut');
