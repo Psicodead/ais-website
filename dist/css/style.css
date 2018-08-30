@@ -71,22 +71,22 @@ body {
       width: 100%;
       height: 100%;
       opacity: 1;
-      -moz-transition: opacity 300ms;
-      -o-transition: opacity 300ms;
-      -webkit-transition: opacity 300ms;
-      transition: opacity 300ms; }
+      -moz-transition: opacity 400ms;
+      -o-transition: opacity 400ms;
+      -webkit-transition: opacity 400ms;
+      transition: opacity 400ms; }
       body .body-wrapper .section .content {
         overflow: hidden;
         width: 100%;
         height: 100%; }
       body .body-wrapper .section.hidden {
-        display: none; }
-      body .body-wrapper .section.show {
-        display: block;
-        opacity: 1; }
+        display: none;
+        opacity: 0; }
       body .body-wrapper .section.transitionOut {
         display: block;
         opacity: 0; }
+      body .body-wrapper .section.show {
+        opacity: 1; }
     body .body-wrapper .rotated {
       -moz-transform: rotate(-90deg);
       -o-transform: rotate(-90deg);

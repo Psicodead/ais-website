@@ -123,57 +123,80 @@ function showCategoryLab(){
 	$('#work-section .workOpts').addClass('hidden');
 }
 function hideSection(tSection){
-	tSection.removeClass('show');
+	console.log("hidding",tSection[0])
 	tSection.addClass('transitionOut');
+	tSection.removeClass('show');
 	setTimeout(()=>{
 		tSection.addClass('hidden');
 		tSection.removeClass('transitionOut');
 	},600);
 }
 function showSection(tSection){
+	console.log("showing",tSection[0])
 	//TODO Fix this method!!!
 	//console.log(tSection);
-	tSection.addClass('transitionOut');
+	//tSection.addClass('transitionOut');
 	//tSection.removeClass('hidden');
-	setTimeout(()=>{
-		tSection.removeClass('hidden');	
-	},10);
-	tSection.removeClass('transitionOut');
-	tSection.addClass('show');
+	tSection.addClass('transitionOut');
+	var transOut = new Promise(function(resolve, reject) {
+		//tSection.addClass('transitionOut');
+		tSection.removeClass('hidden');
+		setTimeout(()=>{
+			resolve();
+		},100);
+	});
+	var removeHidden = new Promise(function(resolve, reject) {
+		// tSection.removeClass('hidden');
+		setTimeout(()=>{
+			tSection.addClass('show');
+			resolve();
+		},200);
+	});
+	Promise.all([transOut,removeHidden]).then(()=>{
+		tSection.addClass('show');
+		tSection.removeClass('transitionOut');
+	})
+	// // setTimeout(()=>{
+	// // 	tSection.removeClass('hidden');	
+	// // },10);
+	// setTimeout(()=>{
+	// 	tSection.removeClass('transitionOut');
+	// 	tSection.addClass('show');
+	// },60);
 }
 function nav(){
 	$('.menu .opt').click(()=>{
 		setTimeout(()=>{
 			closeMenu();
-		},150)
+		},250)
 	})
-	$('.menu-work').click(()=>{
-		hideSection($('.section').not('#work-section').not('.hidden'));
-		setTimeout(()=>{
-			showSection($('#work-section'));
-		},300)
-		//$('.section').addClass('hidden')
-		//$('#work-section').removeClass('hidden');
+	// $('.menu-work').click(()=>{
+	// 	hideSection($('.section').not('#work-section').not('.hidden'));
+	// 	setTimeout(()=>{
+	// 		showSection($('#work-section'));
+	// 	},300)
+	// 	//$('.section').addClass('hidden')
+	// 	//$('#work-section').removeClass('hidden');
 		
-		showCategoryWork();
-	})
-	$('.menu-lab').click(()=>{
-		hideSection($('.section').not('#work-section').not('.hidden'));
-		setTimeout(()=>{
-			showSection($('#work-section'));
-		},300)
-		showCategoryLab();
-	})
-	$('.menu-about').click(()=>{
-		hideSection($('.section').not('#about-section').not('.hidden'));
-		setTimeout(()=>{
-			showSection($('#about-section'));
-			$('#about-section .content').scrollTop(0);
-		},300)
-	})
-	$('.menu-contact').click(()=>{
+	// 	showCategoryWork();
+	// })
+	// $('.menu-lab').click(()=>{
+	// 	hideSection($('.section').not('#work-section').not('.hidden'));
+	// 	setTimeout(()=>{
+	// 		showSection($('#work-section'));
+	// 	},300)
+	// 	showCategoryLab();
+	// })
+	// $('.menu-about').click(()=>{
+	// 	hideSection($('.section').not('#about-section').not('.hidden'));
+	// 	setTimeout(()=>{
+	// 		showSection($('#about-section'));
+	// 		$('#about-section .content').scrollTop(0);
+	// 	},300)
+	// })
+	// $('.menu-contact').click(()=>{
 		
-	})
+	// })
 	$('.goBack .container').click(()=>{
 		hideSection($('.section').not('#work-section').not('.hidden'));
 		setTimeout(()=>{
@@ -241,6 +264,12 @@ function renderContent(uri){
 			},300)
 		break;
 		case '#landing':
+			hideSection($('.section').not('#landing-section').not('.hidden'));
+			setTimeout(()=>{
+				showSection($('#landing-section'));
+			},300)
+		break;
+		default:
 			hideSection($('.section').not('#landing-section').not('.hidden'));
 			setTimeout(()=>{
 				showSection($('#landing-section'));
