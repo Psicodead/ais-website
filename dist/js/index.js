@@ -35627,6 +35627,8 @@ function showCategoryWork() {
 	$('#work-section .lab-projects').addClass('hidden');
 	$('#work-section .workOpts').removeClass('hidden');
 	$('#work-section .labOpts').addClass('hidden');
+	$('.work-type .work-opt').addClass('selected');
+	$('.work-type .lab-opt').removeClass('selected');
 }
 function showCategoryLab() {
 	$('.project').removeClass('selected');
@@ -35636,6 +35638,8 @@ function showCategoryLab() {
 	$('#work-section .work-projects').addClass('hidden');
 	$('#work-section .labOpts').removeClass('hidden');
 	$('#work-section .workOpts').addClass('hidden');
+	$('.work-type .work-opt').removeClass('selected');
+	$('.work-type .lab-opt').addClass('selected');
 }
 function hideSection(tSection) {
 	console.log("hidding", tSection[0]);
@@ -35675,23 +35679,23 @@ function nav() {
 			closeMenu();
 		}, 250);
 	});
-	// $('.menu-work').click(()=>{
-	// 	hideSection($('.section').not('#work-section').not('.hidden'));
-	// 	setTimeout(()=>{
-	// 		showSection($('#work-section'));
-	// 	},300)
-	// 	//$('.section').addClass('hidden')
-	// 	//$('#work-section').removeClass('hidden');
+	$('.menu-work').click(function () {
+		// hideSection($('.section').not('#work-section').not('.hidden'));
+		// setTimeout(()=>{
+		// 	showSection($('#work-section'));
+		// },300)
+		//$('.section').addClass('hidden')
+		//$('#work-section').removeClass('hidden');
 
-	// 	showCategoryWork();
-	// })
-	// $('.menu-lab').click(()=>{
-	// 	hideSection($('.section').not('#work-section').not('.hidden'));
-	// 	setTimeout(()=>{
-	// 		showSection($('#work-section'));
-	// 	},300)
-	// 	showCategoryLab();
-	// })
+		showCategoryWork();
+	});
+	$('.menu-lab').click(function () {
+		// hideSection($('.section').not('#work-section').not('.hidden'));
+		// setTimeout(()=>{
+		// 	showSection($('#work-section'));
+		// },300)
+		showCategoryLab();
+	});
 	// $('.menu-about').click(()=>{
 	// 	hideSection($('.section').not('#about-section').not('.hidden'));
 	// 	setTimeout(()=>{
