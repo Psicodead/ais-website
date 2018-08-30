@@ -132,19 +132,15 @@ function hideSection(tSection){
 	},600);
 }
 function showSection(tSection){
-	console.log("showing",tSection[0])
-	//TODO Fix this method!!!
-	//console.log(tSection);
-	//tSection.addClass('transitionOut');
-	//tSection.removeClass('hidden');
 	tSection.addClass('transitionOut');
+	
 	var transOut = new Promise(function(resolve, reject) {
-		//tSection.addClass('transitionOut');
 		tSection.removeClass('hidden');
 		setTimeout(()=>{
 			resolve();
-		},100);
+		},10);
 	});
+	
 	var removeHidden = new Promise(function(resolve, reject) {
 		// tSection.removeClass('hidden');
 		setTimeout(()=>{
@@ -152,17 +148,11 @@ function showSection(tSection){
 			resolve();
 		},200);
 	});
+	
 	Promise.all([transOut,removeHidden]).then(()=>{
 		tSection.addClass('show');
 		tSection.removeClass('transitionOut');
 	})
-	// // setTimeout(()=>{
-	// // 	tSection.removeClass('hidden');	
-	// // },10);
-	// setTimeout(()=>{
-	// 	tSection.removeClass('transitionOut');
-	// 	tSection.addClass('show');
-	// },60);
 }
 function nav(){
 	$('.menu .opt').click(()=>{
