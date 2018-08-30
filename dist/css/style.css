@@ -406,6 +406,20 @@ body {
           width: 44%; }
         body #about-section .content .team-container .team {
           margin-bottom: 34%; }
+          body #about-section .content .team-container .team .detail {
+            position: absolute;
+            top: 20rem;
+            left: 20rem; }
+            body #about-section .content .team-container .team .detail p {
+              margin: 0; }
+            body #about-section .content .team-container .team .detail .name {
+              font-weight: bold;
+              margin-bottom: 5rem;
+              font-size: 18rem; }
+            body #about-section .content .team-container .team .detail .position {
+              font-weight: normal;
+              text-transform: uppercase;
+              font-size: 12rem; }
         body #about-section .content .team-container .rightPhotos {
           padding-top: 12%; }
         body #about-section .content .team-container .lineTitle {

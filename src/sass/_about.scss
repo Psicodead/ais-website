@@ -80,6 +80,24 @@
             }
             .team{
                 margin-bottom: 34%;
+                .detail{
+                    position: absolute;
+                    top: 20rem;
+                    left: 20rem;
+                    p{
+                        margin: 0;
+                    }
+                    .name{
+                        font-weight: bold;
+                        margin-bottom: 5rem;
+                        font-size: 18rem;
+                    }
+                    .position{
+                        font-weight: normal;
+                        text-transform: uppercase;
+                        font-size: 12rem;
+                    }
+                }
             }
             .rightPhotos{
                 padding-top: 12%;
