@@ -246,9 +246,9 @@ function renderContent(uri){
 		},300)
 		break;
 		case '#contact':
-			hideSection($('.section').not('#work-section').not('.hidden'));
+			hideSection($('.section').not('#contact-section').not('.hidden'));
 			setTimeout(()=>{
-				showSection($('#work-section'));
+				showSection($('#contact-section'));
 			},300)
 		break;
 		case '#':

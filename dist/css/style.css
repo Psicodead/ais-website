@@ -108,7 +108,7 @@ body {
     body #landing-section .feature-work {
       width: 100%;
       height: 100%;
-      background-image: url("../assets/images/placeholder_image.jpg");
+      background-image: url("../assets/images/cfm_featured.jpg");
       background-origin: center;
       background-position: center;
       background-size: cover;
@@ -195,7 +195,7 @@ body {
         body #work-section .bg-container .bg.selected {
           opacity: 1; }
         body #work-section .bg-container .bg.one {
-          background-image: url("../assets/images/comefindme.jpg"); }
+          background-image: url("../assets/images/cfm_featured.jpg"); }
         body #work-section .bg-container .bg.two {
           background-image: url("../assets/images/monarch.jpg"); }
         body #work-section .bg-container .bg.three {
@@ -704,3 +704,14 @@ body {
                 text-align: center; }
                 body .work-detail.section .content .contentWrapper .goBack .container h2:after, body .work-detail.section .content .contentWrapper .goBack .container h2::after {
                   display: none; } }
+  body #contact-section.hidden {
+    display: none;
+    opacity: 0; }
+  body #contact-section .content .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex; }
+  body #contact-section .content .form-container {
+    width: 50%;
+    position: relative;
+    right: 0; }
