@@ -7,12 +7,15 @@
 				p.copy.
 					Get in touch and we'll get back to you as soon as we can. We look forward to hearing from you!
 				form
-					span.customInput
+					span.inputContainer
 						input(type="text" name="name" required placeholder="Name*")
-					span.customInput
+					span.inputContainer
 						input(type="email" name="email" required placeholder="Email*")
-					span.customInput
+					span.inputContainer
 						textarea(name="message" required placeholder="Message*")
-
-					//- span.customInput
-					//- 	input(type="text" name="name")
+					br
+					br
+					span.inputContainer
+						input(type="text" name="funfact" placeholder="Funfact!")
+					
+					input(type="submit" value="SEND")

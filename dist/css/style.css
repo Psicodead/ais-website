@@ -710,8 +710,185 @@ body {
   body #contact-section .content .wrapper {
     width: 100%;
     height: 100%;
-    display: flex; }
+    padding: 60rem; }
+    body #contact-section .content .wrapper .lineTitle {
+      transform-origin: left center;
+      bottom: 50%;
+      -moz-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      position: absolute; }
+      body #contact-section .content .wrapper .lineTitle h1 {
+        -moz-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #838383;
+        color: transparent;
+        font-size: 110rem;
+        letter-spacing: 4px;
+        line-height: 90%;
+        margin: 0;
+        top: 0;
+        position: absolute;
+        white-space: nowrap; }
   body #contact-section .content .form-container {
     width: 50%;
-    position: relative;
-    right: 0; }
+    position: absolute;
+    right: 80rem;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    body #contact-section .content .form-container form span.inputContainer {
+      display: block;
+      width: auto;
+      margin-bottom: 10rem;
+      position: relative; }
+      body #contact-section .content .form-container form span.inputContainer::after, body #contact-section .content .form-container form span.inputContainer:after {
+        -moz-transition: transform 600ms;
+        -o-transition: transform 600ms;
+        -webkit-transition: transform 600ms;
+        transition: transform 600ms;
+        -moz-transform: scaleX(0);
+        -o-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        transform-origin: left;
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0; }
+      body #contact-section .content .form-container form span.inputContainer::after, body #contact-section .content .form-container form span.inputContainer:after {
+        border-bottom: 1px solid #838383; }
+      body #contact-section .content .form-container form span.inputContainer.focus::after {
+        -moz-transform: scaleX(1);
+        -o-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1); }
+      body #contact-section .content .form-container form span.inputContainer:focus-within {
+        outline: none !important;
+        box-shadow: none; }
+        body #contact-section .content .form-container form span.inputContainer:focus-within::after {
+          -moz-transform: scaleX(1);
+          -o-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1); }
+      body #contact-section .content .form-container form span.inputContainer::before, body #contact-section .content .form-container form span.inputContainer:before {
+        -moz-transition: border 600ms;
+        -o-transition: border 600ms;
+        -webkit-transition: border 600ms;
+        transition: border 600ms;
+        transform-origin: left;
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid #838383; }
+      body #contact-section .content .form-container form span.inputContainer::after, body #contact-section .content .form-container form span.inputContainer:after, body #contact-section .content .form-container form span.inputContainer::before, body #contact-section .content .form-container form span.inputContainer:before {
+        bottom: 0rem; }
+      body #contact-section .content .form-container form span.inputContainer.required::before, body #contact-section .content .form-container form span.inputContainer.required:before {
+        border-bottom: 1px solid darkred; }
+      body #contact-section .content .form-container form span.inputContainer input {
+        height: 40rem;
+        font-size: 13rem; }
+      body #contact-section .content .form-container form span.inputContainer textarea {
+        font-size: 13rem;
+        height: 120rem;
+        margin-top: 15rem; }
+
+@-moz-keyframes autofill {
+  to {
+    background: transparent; } }
+
+@-webkit-keyframes autofill {
+  to {
+    background: transparent; } }
+
+@keyframes autofill {
+  to {
+    background: transparent; } }
+      body #contact-section .content .form-container form span.inputContainer input:-webkit-autofill, body #contact-section .content .form-container form span.inputContainer input:-webkit-autofill:hover, body #contact-section .content .form-container form span.inputContainer input:-webkit-autofill:focus {
+        color: white !important;
+        -webkit-text-fill-color: #838383;
+        -webkit-animation-name: autofill;
+        -webkit-animation-fill-mode: both; }
+      body #contact-section .content .form-container form span.inputContainer input, body #contact-section .content .form-container form span.inputContainer textarea {
+        outline: none !important;
+        box-shadow: none;
+        color: #838383;
+        font-family: 'Roboto';
+        -webkit-font-smoothing: antialiased;
+        font-weight: normal;
+        text-align: left;
+        text-align-last: left;
+        background: none;
+        border: none;
+        width: 100%;
+        text-overflow: ellipsis; }
+        body #contact-section .content .form-container form span.inputContainer input::-moz-placeholder, body #contact-section .content .form-container form span.inputContainer textarea::-moz-placeholder {
+          color: #838383;
+          text-align: left;
+          font-family: "Roboto", sans-serif;
+          -webkit-font-smoothing: antialiased;
+          font-weight: normal;
+          letter-spacing: 2rem;
+          font-size: 10rem;
+          text-transform: uppercase;
+          opacity: 1; }
+        body #contact-section .content .form-container form span.inputContainer input::-webkit-input-placeholder, body #contact-section .content .form-container form span.inputContainer textarea::-webkit-input-placeholder {
+          color: #838383;
+          text-align: left;
+          font-family: "Roboto", sans-serif;
+          -webkit-font-smoothing: antialiased;
+          font-weight: normal;
+          letter-spacing: 2rem;
+          font-size: 10rem;
+          text-transform: uppercase;
+          opacity: 1; }
+        body #contact-section .content .form-container form span.inputContainer input:-moz-placeholder, body #contact-section .content .form-container form span.inputContainer textarea:-moz-placeholder {
+          color: #838383;
+          text-align: left;
+          font-family: "Roboto", sans-serif;
+          -webkit-font-smoothing: antialiased;
+          font-weight: normal;
+          letter-spacing: 2rem;
+          font-size: 10rem;
+          text-transform: uppercase;
+          opacity: 1; }
+        body #contact-section .content .form-container form span.inputContainer input::-ms-input-placeholder, body #contact-section .content .form-container form span.inputContainer textarea::-ms-input-placeholder {
+          color: #838383;
+          text-align: left;
+          font-family: "Roboto", sans-serif;
+          font-weight: normal;
+          letter-spacing: 2rem;
+          font-size: 10rem;
+          text-transform: uppercase;
+          transform: scale(0.5); }
+        body #contact-section .content .form-container form span.inputContainer input:-ms-input-placeholder, body #contact-section .content .form-container form span.inputContainer textarea:-ms-input-placeholder {
+          color: #838383;
+          text-align: left;
+          font-family: "Roboto", sans-serif;
+          font-weight: normal;
+          letter-spacing: 2rem;
+          font-size: 10rem;
+          text-transform: uppercase;
+          letter-spacing: auto;
+          transform: scale(0.5); }
+        body #contact-section .content .form-container form span.inputContainer input:focus, body #contact-section .content .form-container form span.inputContainer input::focus, body #contact-section .content .form-container form span.inputContainer textarea:focus, body #contact-section .content .form-container form span.inputContainer textarea::focus {
+          outline: none !important;
+          box-shadow: none; }
+        body #contact-section .content .form-container form span.inputContainer input:focus-within, body #contact-section .content .form-container form span.inputContainer textarea:focus-within {
+          outline: none !important;
+          box-shadow: none; }
