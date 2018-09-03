@@ -1,7 +1,7 @@
 .work-detail.section{
 	padding: 0;
 	.content{
-		padding-top: 150rem;
+		padding-top: 120rem;
 		//background-color: $darkGrey;
 		//position: absolute;
 		//left: 0;
@@ -45,6 +45,18 @@
 			}
 			.photoWrapper{
 				margin-top: 100rem;
+				.pair{
+					display: flex;
+					justify-content: space-between;
+				}
+				.workPhoto{
+					margin-top: 20rem;
+					&.half{
+						width: 49%;
+						display: inline;
+						align-self: center;
+					}
+				}
 			}
 			.goBack{
 				position: fixed;

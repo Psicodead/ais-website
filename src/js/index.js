@@ -88,8 +88,9 @@ function selectWork(){
 			//console.log('datalink',$(this)[0].getAttribute("data-link"))
 			if(!$(this)[0].getAttribute("data-link"))
 				return
-			hideSection($('.section').not('.hidden'));
-			showSection($($(this)[0].getAttribute("data-link")));
+			// hideSection($('.section').not('.hidden'));
+			// showSection($($(this)[0].getAttribute("data-link")));
+			window.location.href = $(this)[0].getAttribute("data-link");
 		},300)
 	})
 
@@ -192,10 +193,11 @@ function nav(){
 		
 	// })
 	$('.goBack .container').click(()=>{
-		hideSection($('.section').not('#work-section').not('.hidden'));
-		setTimeout(()=>{
-			showSection($('#work-section'));
-		},300)
+		// hideSection($('.section').not('#work-section').not('.hidden'));
+		// setTimeout(()=>{
+		// 	showSection($('#work-section'));
+		// },300)
+		window.location.href = '#work';
 		showCategoryWork();
 	})
 }

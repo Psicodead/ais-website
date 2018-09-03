@@ -604,7 +604,7 @@ body {
   body .work-detail.section {
     padding: 0; }
     body .work-detail.section .content {
-      padding-top: 150rem;
+      padding-top: 120rem;
       width: 100%;
       height: 100%;
       overflow-y: scroll;
@@ -636,6 +636,15 @@ body {
             line-height: 20rem; }
         body .work-detail.section .content .contentWrapper .photoWrapper {
           margin-top: 100rem; }
+          body .work-detail.section .content .contentWrapper .photoWrapper .pair {
+            display: flex;
+            justify-content: space-between; }
+          body .work-detail.section .content .contentWrapper .photoWrapper .workPhoto {
+            margin-top: 20rem; }
+            body .work-detail.section .content .contentWrapper .photoWrapper .workPhoto.half {
+              width: 49%;
+              display: inline;
+              align-self: center; }
         body .work-detail.section .content .contentWrapper .goBack {
           position: fixed;
           left: 80rem;
@@ -916,4 +925,5 @@ body {
       font-size: 16rem;
       font-family: KelsonSans, Helvetica, sans-serif, arial;
       font-weight: bold;
-      letter-spacing: 2rem; }
+      letter-spacing: 2rem;
+      cursor: pointer; }
