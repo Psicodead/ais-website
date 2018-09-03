@@ -737,7 +737,8 @@ body {
         position: absolute;
         white-space: nowrap; }
   body #contact-section .content .form-container {
-    width: 50%;
+    padding-top: 30rem;
+    width: 45%;
     position: absolute;
     right: 80rem;
     top: 50%;
@@ -746,11 +747,15 @@ body {
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%); }
+    body #contact-section .content .form-container .copy {
+      font-size: 18rem;
+      line-height: 30rem; }
     body #contact-section .content .form-container form span.inputContainer {
       display: block;
       width: auto;
       margin-bottom: 10rem;
-      position: relative; }
+      position: relative;
+      width: 80% !important; }
       body #contact-section .content .form-container form span.inputContainer::after, body #contact-section .content .form-container form span.inputContainer:after {
         -moz-transition: transform 600ms;
         -o-transition: transform 600ms;
@@ -802,11 +807,19 @@ body {
         border-bottom: 1px solid darkred; }
       body #contact-section .content .form-container form span.inputContainer input {
         height: 40rem;
-        font-size: 13rem; }
+        font-size: 13rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none; }
       body #contact-section .content .form-container form span.inputContainer textarea {
         font-size: 13rem;
-        height: 120rem;
-        margin-top: 15rem; }
+        height: 90rem;
+        margin-top: 15rem;
+        resize: vertical;
+        overflow-y: scroll;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none; }
 
 @-moz-keyframes autofill {
   to {
@@ -827,7 +840,7 @@ body {
       body #contact-section .content .form-container form span.inputContainer input, body #contact-section .content .form-container form span.inputContainer textarea {
         outline: none !important;
         box-shadow: none;
-        color: #838383;
+        color: white;
         font-family: 'Roboto';
         -webkit-font-smoothing: antialiased;
         font-weight: normal;
@@ -892,3 +905,15 @@ body {
         body #contact-section .content .form-container form span.inputContainer input:focus-within, body #contact-section .content .form-container form span.inputContainer textarea:focus-within {
           outline: none !important;
           box-shadow: none; }
+    body #contact-section .content .form-container form input[type=submit] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background: white;
+      margin-top: 30rem;
+      width: 25%;
+      height: 45rem;
+      font-size: 16rem;
+      font-family: KelsonSans, Helvetica, sans-serif, arial;
+      font-weight: bold;
+      letter-spacing: 2rem; }

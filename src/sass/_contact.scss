@@ -30,11 +30,16 @@
 			}
 		}
 		.form-container{
-			width: 50%;
+			padding-top: 30rem;
+			width: 45%;
 			position: absolute;
 			right: 80rem;
 			top: 50%;
 			@include transform(translateY(-50%));
+			.copy{
+				font-size: 18rem;
+				line-height: 30rem;
+			}
 			form{
 				span.inputContainer{
 					display: block;
@@ -43,6 +48,7 @@
 					margin-bottom: 10rem;
 					position: relative;
 					//display: inline-block;
+					width: 80% !important;
 			
 					&::after, &:after{
 			
@@ -98,12 +104,20 @@
 					input{
 						height: 40rem;
 						font-size: 13rem;
+						-webkit-appearance: none;
+						-moz-appearance:    none;
+						appearance:         none;
 						//margin-bottom: 20rem;
 					}
 					textarea{
 						font-size: 13rem;
-						height: 120rem;
+						height: 90rem;
 						margin-top: 15rem;
+						resize: vertical;
+						overflow-y: scroll;
+						-webkit-appearance: none;
+						-moz-appearance:    none;
+						appearance:         none;
 					}
 					@-moz-keyframes autofill { to { background: transparent; } }
 					@-webkit-keyframes autofill { to { background: transparent; } }
@@ -119,7 +133,7 @@
 					input, textarea {
 						outline: none !important;
 						box-shadow: none;
-						color: $lGrey;
+						color: white;
 						font-family: 'Roboto';
 						-webkit-font-smoothing: antialiased;
 						//font-size: 16rem;
@@ -183,6 +197,21 @@
 							box-shadow: none;
 						}
 					}
+				}
+				input[type=submit]{
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+					
+					background: white;
+					margin-top: 30rem;
+					width: 25%;
+					height: 45rem;
+
+					font-size: 16rem;
+					font-family: KelsonSans, $font-stack;
+					font-weight: bold;
+					letter-spacing: 2rem;
 				}
 			}
 		}
