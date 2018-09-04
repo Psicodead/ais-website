@@ -197,9 +197,9 @@ body {
         body #work-section .bg-container .bg.one {
           background-image: url("../assets/images/cfm_featured.jpg"); }
         body #work-section .bg-container .bg.two {
-          background-image: url("../assets/images/monarch.jpg"); }
+          background-image: url("../assets/images/monarch_featured.jpg"); }
         body #work-section .bg-container .bg.three {
-          background-image: url("../assets/images/carhartt.jpg"); }
+          background-image: url("../assets/images/carhartt_featured.jpg"); }
     body #work-section .selector-container {
       width: 100%;
       height: 100%; }
