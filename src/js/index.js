@@ -26,7 +26,7 @@ $(document).ready(()=>{
 	nav();
 	checkURL();
 	renderContent(tempUri);
-	
+	validateForm();
 })
 
 function menuControl(){
@@ -250,4 +250,66 @@ function UIAnimations(){
 	$.each(options, function(i,val){
 		TweenLite.from(options[i],0.6,{left:"-40rem", opacity: 0, delay:0.2+(i*0.2)})
 	})
+}
+
+function validateForm(){
+	const submitButton =  $('.submitBtn');
+	const formContent = $('#contactForm')
+	
+	submitButton.on('click',function(){
+		this.preventDefault;
+		console.log('hiiii');
+		formContent.trigger("submit");
+	})
+	
+	$('.inputContainer.required').on('blur',()=>{ //NOT WORKING
+		checkFormInputs(formContent)
+	})
+
+	formContent.on('submit',(event)=>{
+		event.preventDefault();
+		if(checkFormInputs(formContent)){
+			$('.required').each(function(){
+				$(this).removeClass('required');
+			})
+			var tempEmail = 'mailto:sales@augmentedislandstudios.com?subject=Contact from website';
+			tempEmail+='&body='+formContent[0].message.value;
+			tempEmail+='%0D%0A%0D%0A%0D%0AContact info: %0D%0A Name: '+formContent[0].name.value;
+			tempEmail+='%0D%0A Email: '+formContent[0].email.value;
+			tempEmail+='%0D%0A Phone: '+formContent[0].phone.value;
+			console.log(tempEmail);
+			location.href=tempEmail;
+			location.href='#contact';
+		}
+	});
+}
+
+function checkFormInputs(formContent){
+	//validate fields
+	let fail = false;
+	let name;
+	let fail_log = '';
+	let userEmailValid = false;
+	console.log(formContent);
+	formContent.find('input, textarea').each(function(){
+		console.log('hiiiiii');
+		if( !$( this ).prop( 'required' )){
+			//Do nothing
+			console.log('noup');
+		} else {
+			if ( ! $( this ).val() ) {
+				fail = true;
+				$( this ).parent().addClass("required");
+				name = $( this ).attr( 'name' );
+				fail_log += name + " is required \n";
+			}
+		}
+	});
+
+	//submit if fail never got set to true
+	if ( ! fail ) {	
+		return true;
+	} else {
+		return false
+	}
 }

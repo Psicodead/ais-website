@@ -6,7 +6,7 @@
 			.form-container
 				p.copy.
 					Get in touch and we'll get back to you as soon as we can. We look forward to hearing from you!
-				form
+				form#contactForm
 					span.inputContainer
 						input(type="text" name="name" required placeholder="Name*")
 					span.inputContainer
@@ -16,6 +16,6 @@
 					br
 					br
 					span.inputContainer
-						input(type="tel" name="telphone" placeholder="Phone: +1 888 888 8888"  minlength="10" maxlength="14" title="Phone number")
+						input(type="tel" name="phone" placeholder="Phone: +1 888 888 8888"  minlength="10" maxlength="14" title="Phone number")
 						
-					input(type="submit" value="SEND")
+					input.submitBtn(type="submit" value="SEND")
