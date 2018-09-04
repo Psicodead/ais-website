@@ -25,6 +25,13 @@
 		// 		opacity: 1;
 		// 	}
 		// }
+		.labOpts{
+			.bg{
+				&.one{
+					background-image: url('../assets/images/comingsoon.jpg');
+				}
+			}
+		}
 		.bg{
 			position: absolute;
 			top:0;
@@ -65,6 +72,7 @@
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			background-color: rgba(0,0,0,.2);
 			.project{
 				cursor: pointer;
 				margin: 30rem auto;
@@ -146,6 +154,38 @@
 						background-color: white;
 						height: 1rem;
 					} 
+				}
+			}
+		}
+	}
+	@media (min-width: 320px) and (max-width: 740px){
+		.selector-container{
+	
+			.project-container{	
+				.project{
+					
+					.name{
+						font-size: 35rem;
+					}
+					.tag{
+						display: none;
+					}
+					&.selected{
+						.name{
+							font-size: 40rem;
+						}
+					}
+				}
+			}
+		}
+		.work-type{
+			//@include transform(translateX(-50%));
+			left: 50%;
+			bottom: 40rem;
+			.container.rotated{
+				@include transform(translateX(-50%));
+				.opt{
+					margin: 0 10rem;
 				}
 			}
 		}

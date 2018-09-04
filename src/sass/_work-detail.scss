@@ -108,6 +108,11 @@
 						width: 100%;
 						left: 50%;
 						@include transform(translateX(-50%));
+						&.half{
+							left: 0;
+							@include transform(none);
+							//align-self: center;
+						}
 					}					
 				}
 				.goBack{
