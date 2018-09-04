@@ -24,7 +24,7 @@
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: white;
                 color: transparent;
-                font-size: 110rem;
+                font-size: 95rem;
                 letter-spacing: 4px;
                 line-height: 70%;
                 margin: 0;
@@ -96,6 +96,9 @@
                         font-weight: normal;
                         text-transform: uppercase;
                         font-size: 12rem;
+                        &.short{
+                            display: none;
+                        }
                     }
                 }
             }
@@ -167,7 +170,7 @@
    //mobile
 	@media (min-width: 320px) and (max-width: 740px){
         .content{
-            padding: 0 40rem;
+            padding: 0 20rem;
             
             .cornerImage{
                 display: none;
@@ -222,6 +225,21 @@
                 padding: 0;
                 .team{
                     margin-bottom: 4%;
+                    .detail{
+                        top: 7rem;
+                        left: 7rem;
+                        .name{
+                            margin-bottom: 5rem;
+                            font-size: 11rem;
+                        }
+                        .position{
+                            font-size: 8rem;
+                            display: none;
+                            &.short{
+                                display: block;
+                            }
+                        }
+                    }
                 }
                 .lineTitle{
                     text-align: right;

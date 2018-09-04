@@ -19,7 +19,7 @@
 					-webkit-text-stroke-width: 1px;
 					-webkit-text-stroke-color: $lGrey;
 					color: transparent;
-					font-size: 110rem;
+					font-size: 90rem;
 					letter-spacing: 4px;
 					line-height: 90%;
 					margin: 0;
@@ -125,7 +125,7 @@
 
 					input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus{
 						color: white !important;
-						-webkit-text-fill-color: $lGrey;
+						-webkit-text-fill-color: white;
 						-webkit-animation-name: autofill;
 						-webkit-animation-fill-mode: both;
 					}
@@ -218,5 +218,57 @@
 			}
 		}
 	}
+	@media (min-width: 320px) and (max-width: 740px){
+		overflow-y: scroll;
+		overflow-x: hidden;
+        .content{
+			height: 100%;
+			overflow-y: visible;
+           .wrapper{
+			   	height: 100%;
+				padding: 60rem 20rem;
+				display: flex;
+				justify-content: space-around;
+				flex-direction: column;
+				overflow-y: visible;
+				.lineTitle{
+					position: relative;
+					margin-bottom: 30rem;
+					margin-top: 50rem;
+					bottom: unset;
+					@include transform(none);
+					h1{
+						@include transform(none);
+						position: relative;
+						-webkit-text-stroke-width: 0.5px;
+						font-size: 40rem;
+					}
+				}
+				.form-container{
+					position: relative;
+					right: 0; left: 0; top: 0;
+					width: 100%;
+					@include transform(none);
+					padding: 0;
+					.copy{
+						font-size: 13rem;
+						line-height: 21rem;
+					}
+					form{
+						.inputContainer{
+							width: 100% !important;
+							input{
+								height: 30rem;
+							}
+						}
+						input[type=submit]{
+							width: 100%;
+							margin-bottom: 30rem;
+						}
+					}
 
+				}
+		   }
+		}
+	}
 }
