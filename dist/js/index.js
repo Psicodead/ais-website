@@ -20862,7 +20862,7 @@ function scrollDirection() {
 			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 				// is mobile..
 				//alert('ismobile');
-				_gsap.TweenLite.to($('.fixed-ui'), 0.6, { top: '-10%' });
+				_gsap.TweenLite.to($('.fixed-ui'), 0.6, { top: '-30%' });
 			}
 		} else {
 			//Scrolling Up
