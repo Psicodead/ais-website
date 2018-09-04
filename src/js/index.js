@@ -337,7 +337,7 @@ function scrollDirection(){
 			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 				// is mobile..
 				//alert('ismobile');
-				TweenLite.to($('.fixed-ui'),0.6,{top:'-30%'})
+				TweenLite.to($('.fixed-ui'),0.6,{top:'-300px'})
 			}
 		} else {
 		//Scrolling Up
