@@ -18636,7 +18636,7 @@ function validateForm() {
 		formContent.trigger("submit");
 	});
 
-	$('.inputContainer.required').on('blur', function () {
+	$(document).on("focusout", ".inputContainer.required input", function () {
 		//NOT WORKING
 		checkFormInputs(formContent);
 	});
@@ -18677,6 +18677,8 @@ function checkFormInputs(formContent) {
 				$(this).parent().addClass("required");
 				name = $(this).attr('name');
 				fail_log += name + " is required \n";
+			} else {
+				$(this).parent().removeClass("required");
 			}
 		}
 	});
