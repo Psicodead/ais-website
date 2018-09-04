@@ -19,7 +19,6 @@ function createProjects(){
 
 $(document).ready(()=>{
 	tempUri = window.location.hash;
-	console.log('code ready');
 	//createProjects();
 	menuControl();
 	selectWork();
@@ -123,7 +122,7 @@ function showCategoryLab(){
 	$('.work-type .lab-opt').addClass('selected');
 }
 function hideSection(tSection){
-	console.log("hidding",tSection[0])
+	//console.log("hidding",tSection[0])
 	tSection.addClass('transitionOut');
 	tSection.removeClass('show');
 	setTimeout(()=>{
@@ -176,19 +175,16 @@ function nav(){
 function checkURL(){
 	window.onpopstate = function(event) {
 		tempUri = window.location.hash;
-		console.log('url', tempUri);
+		//console.log('url', tempUri);
 		renderContent(tempUri);
-		//console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+		
 	};
-	// var tempUri = window.location.pathname;
-	// Console.log('url', tempUri);
-	
 }
 
 function renderContent(uri){
-	console.log('rendering url', uri);
+	//console.log('rendering url', uri);
 	switch(uri){
-		case '#aboutus':
+		case '#about':
 			hideSection($('.section').not('#about-section').not('.hidden'));
 			setTimeout(()=>{
 				showSection($('#about-section'));
@@ -225,17 +221,7 @@ function renderContent(uri){
 			},300)
 		break;
 		case '#':
-			hideSection($('.section').not('#landing-section').not('.hidden'));
-			setTimeout(()=>{
-				showSection($('#landing-section'));
-			},300)
-		break;
 		case '#landing':
-			hideSection($('.section').not('#landing-section').not('.hidden'));
-			setTimeout(()=>{
-				showSection($('#landing-section'));
-			},300)
-		break;
 		default:
 			hideSection($('.section').not('#landing-section').not('.hidden'));
 			setTimeout(()=>{
@@ -258,7 +244,6 @@ function validateForm(){
 	
 	submitButton.on('click',function(){
 		this.preventDefault;
-		console.log('hiiii');
 		formContent.trigger("submit");
 	})
 	
@@ -277,7 +262,6 @@ function validateForm(){
 			tempEmail+='%0D%0A%0D%0A%0D%0AContact info: %0D%0A Name: '+formContent[0].name.value;
 			tempEmail+='%0D%0A Email: '+formContent[0].email.value;
 			tempEmail+='%0D%0A Phone: '+formContent[0].phone.value;
-			console.log(tempEmail);
 			location.href=tempEmail;
 			location.href='#contact';
 		}
@@ -285,17 +269,13 @@ function validateForm(){
 }
 
 function checkFormInputs(formContent){
-	//validate fields
 	let fail = false;
 	let name;
 	let fail_log = '';
 	let userEmailValid = false;
-	console.log(formContent);
 	formContent.find('input, textarea').each(function(){
-		console.log('hiiiiii');
 		if( !$( this ).prop( 'required' )){
 			//Do nothing
-			console.log('noup');
 		} else {
 			if ( ! $( this ).val() ) {
 				fail = true;
