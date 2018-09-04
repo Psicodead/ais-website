@@ -1,7 +1,8 @@
 var $ = require('jquery');
 //var json = require('./data/project.json'); //with path
 var tempUri = window.location.hash;
-import { TweenMax, TimelineLite, Power4, Power3, Linear, Elastic, CSSPlugin, ScrollToPlugin} from 'gsap';
+import { TweenLite ,TweenMax, TimelineLite, Power4, Power3, Linear, Elastic, CSSPlugin} from 'gsap';
+import 'gsap/src/uncompressed/plugins/ScrollToPlugin';
 //var mJson = JSON.parse(json);
 //console.log("json",json.projects);
 
@@ -26,6 +27,8 @@ $(document).ready(()=>{
 	checkURL();
 	renderContent(tempUri);
 	validateForm();
+	scrollDirection();
+	removeAutoComplete();
 })
 
 function menuControl(){
@@ -162,9 +165,6 @@ function nav(){
 	$('.menu-work').click(()=>{
 		showCategoryWork();
 	})
-	$('.menu-lab').click(()=>{
-		showCategoryLab();
-	})
 
 	$('.goBack .container').click(()=>{
 		window.location.href = '#work';
@@ -229,6 +229,9 @@ function renderContent(uri){
 			},300)
 		break;
 	}
+	var section = $('.section .content');
+	TweenLite.to(section, 1, {scrollTo:0});
+	//TweenLite.to(window, 1, {scrollTo:0});
 }
 function UIAnimations(){
 	var menu = $('.menu');
@@ -247,7 +250,7 @@ function validateForm(){
 		formContent.trigger("submit");
 	})
 	
-	$(document).on("focusout",".inputContainer.required input",()=>{ //NOT WORKING
+	$(document).on("focusout",".inputContainer.required input",()=>{
 		checkFormInputs(formContent)
 	})
 
@@ -293,5 +296,71 @@ function checkFormInputs(formContent){
 		return true;
 	} else {
 		return false
+	}
+}
+
+function scrollDirection(){
+	//  //Firefox
+	//  $('.content').bind('DOMMouseScroll', function(e){
+	// 	if(e.originalEvent.detail > 0) {
+	// 		//scroll down
+	// 		console.log('Down');
+	// 	}else {
+	// 		//scroll up
+	// 		console.log('Up');
+	// 	}
+   
+	// 	//prevent page fom scrolling
+	// 	return false;
+	// },{passive: true});
+   
+	// //IE, Opera, Safari
+	// $('.content').bind('mousewheel', function(e){
+	// 	if(e.originalEvent.wheelDelta < 0) {
+	// 		//scroll down
+	// 		console.log('Down');
+	// 	}else {
+	// 		//scroll up
+	// 		console.log('Up');
+	// 	}
+   
+	// 	//prevent page fom scrolling
+	// 	return false;
+	// },{passive: true});
+	var iScrollPos = 0;
+
+	$('.content').scroll(function () {
+		var iCurScrollPos = $(this).scrollTop();
+		if (iCurScrollPos > iScrollPos) {
+			//Scrolling Down
+			console.log('Down');
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				// is mobile..
+				//alert('ismobile');
+				TweenLite.to($('.fixed-ui'),0.6,{top:'-10%'})
+			}
+		} else {
+		//Scrolling Up
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			// is mobile..
+			//alert('ismobile');
+			TweenLite.to($('.fixed-ui'),0.6,{top:'0%'})
+		}
+		console.log('Up');
+		}
+		iScrollPos = iCurScrollPos;
+	});
+}
+function removeAutoComplete(){
+	if (document.getElementsByTagName) {
+
+		var inputElements = document.getElementsByTagName("input");
+		
+		for ( var i=0; inputElements[i]; i++) {
+			if (inputElements[i].className && (inputElements[i].className.indexOf("disableAutoComplete") != -1)) {
+				inputElements[i].setAttribute("autocomplete","nope");
+				console.log("disbale",i)	
+			}
+		}
 	}
 }

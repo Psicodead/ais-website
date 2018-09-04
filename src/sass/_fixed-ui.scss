@@ -5,7 +5,7 @@
 	height: 100%;
 	//background-color: green;
 	top: 0; left: 0;
-	padding: 100px;
+	padding: 100rem;
 	user-select: none;
 	pointer-events: none;
 	.logo, .openMenuBtn, .closeMenuBtn{
@@ -14,8 +14,8 @@
 	.logo{
 		cursor: pointer;
 		position: absolute;
-		top: 50px; left: 80px;
-		width: 50px;
+		top: 50rem; left: 80rem;
+		width: 50rem;
 		img{
 			width: 100%;
 		}
@@ -23,9 +23,9 @@
 	.isotipo{
 		//display: none;
 		position: absolute;
-		left: 150px;
+		left: 150rem;
 		top: 54rem;
-		width: 150px;
+		width: 150rem;
 		overflow: hidden;
 		img{
 			height: 100%;
@@ -45,8 +45,8 @@
 	.closeMenuBtn, .openMenuBtn{
 		cursor: pointer;
 		position: absolute;
-		top: 50px; right: 80px;
-		width: 50px;
+		top: 50rem; right: 80rem;
+		width: 50rem;
 		&.hidden{
 			display: none;
 		}
@@ -55,16 +55,24 @@
 		width: 30rem;
 	}
 	//mobile
-	@media (min-width: 320px) and (max-width: 740px){
+	@media (min-width: 300px) and (max-width: 740px){
+		.logo, .isotipo, .closeMenuBtn, .openMenuBtn{
+			top: 30rem;
+			width: 40rem;
+		}
 		.logo{
-			left: 40px;
+			left: 30rem;
 		}
 		.isotipo{
-			left: 100px;
+			left: 80rem;
 			display: none;
 		}
+		.closeMenuBtn{
+			width: 30rem;
+		}
 		.closeMenuBtn, .openMenuBtn{
-			right: 40px;
+			right: 30rem;
+			//width: 40px;
 		}
 	}
 }

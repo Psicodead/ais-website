@@ -116,8 +116,10 @@
 					}					
 				}
 				.goBack{
-					left: 52%;
-					top: 50rem;
+					position: absolute;
+					left: 52%;				
+					top: -50rem; //top: 50rem;
+
 					@include transform(translateX(-50%));
 					.container{
 						@include transform(none);

@@ -307,7 +307,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    padding: 100px;
+    padding: 100rem;
     user-select: none;
     pointer-events: none; }
     body .fixed-ui .logo, body .fixed-ui .openMenuBtn, body .fixed-ui .closeMenuBtn {
@@ -315,16 +315,16 @@ body {
     body .fixed-ui .logo {
       cursor: pointer;
       position: absolute;
-      top: 50px;
-      left: 80px;
-      width: 50px; }
+      top: 50rem;
+      left: 80rem;
+      width: 50rem; }
       body .fixed-ui .logo img {
         width: 100%; }
     body .fixed-ui .isotipo {
       position: absolute;
-      left: 150px;
+      left: 150rem;
       top: 54rem;
-      width: 150px;
+      width: 150rem;
       overflow: hidden; }
       body .fixed-ui .isotipo img {
         height: 100%;
@@ -348,21 +348,26 @@ body {
     body .fixed-ui .closeMenuBtn, body .fixed-ui .openMenuBtn {
       cursor: pointer;
       position: absolute;
-      top: 50px;
-      right: 80px;
-      width: 50px; }
+      top: 50rem;
+      right: 80rem;
+      width: 50rem; }
       body .fixed-ui .closeMenuBtn.hidden, body .fixed-ui .openMenuBtn.hidden {
         display: none; }
     body .fixed-ui .closeMenuBtn {
       width: 30rem; }
-    @media (min-width: 320px) and (max-width: 740px) {
+    @media (min-width: 300px) and (max-width: 740px) {
+      body .fixed-ui .logo, body .fixed-ui .isotipo, body .fixed-ui .closeMenuBtn, body .fixed-ui .openMenuBtn {
+        top: 30rem;
+        width: 40rem; }
       body .fixed-ui .logo {
-        left: 40px; }
+        left: 30rem; }
       body .fixed-ui .isotipo {
-        left: 100px;
+        left: 80rem;
         display: none; }
+      body .fixed-ui .closeMenuBtn {
+        width: 30rem; }
       body .fixed-ui .closeMenuBtn, body .fixed-ui .openMenuBtn {
-        right: 40px; } }
+        right: 30rem; } }
   body #about-section {
     padding: 0; }
     body #about-section .content {
@@ -734,8 +739,9 @@ body {
                 -webkit-transform: none;
                 transform: none; }
           body .work-detail.section .content .contentWrapper .goBack {
+            position: absolute;
             left: 52%;
-            top: 50rem;
+            top: -50rem;
             -moz-transform: translateX(-50%);
             -o-transform: translateX(-50%);
             -ms-transform: translateX(-50%);

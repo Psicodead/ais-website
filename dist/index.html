@@ -159,7 +159,7 @@
       </div>
       <div class="menu hidden">
         <div class="backgroundImage"><img src="./assets/images/bg_image.svg" alt=""></div>
-        <div class="options"><a class="opt menu-work" href="#work">Work</a><a class="opt menu-blog" href="#">Blog</a><a class="opt menu-about" href="#about">About</a><a class="opt menu-lab" href="#contact">Contact</a></div>
+        <div class="options"><a class="opt menu-work" href="#work">Work</a><a class="opt menu-blog" href="#">Blog</a><a class="opt menu-about" href="#about">About</a><a class="opt menu-contact" href="#contact">Contact</a></div>
         <div class="social">
           <div class="container rotated"><a class="sn facebook" href="https://www.facebook.com/augmentedislandstudios/?ref=br_rs" target="_blank">Facebook</a><a class="sn instagram" href="https://www.instagram.com/augmentedislandstudios/?hl=en" target="_blank">Instagram</a><a class="sn linkedin" href="https://www.linkedin.com/company/augmented-island-studios/" target="_blank">Linkedin</a></div>
         </div>
@@ -243,11 +243,11 @@
             </div>
             <div class="form-container">
               <p class="copy">Get in touch and we'll get back to you as soon as we can. We look forward to hearing from you!</p>
-              <form id="contactForm"><span class="inputContainer">
-                  <input type="text" name="name" required placeholder="Name*"></span><span class="inputContainer">
-                  <input type="email" name="email" required placeholder="Email*"></span><span class="inputContainer">
-                  <textarea name="message" required placeholder="Message*"></textarea></span><br><br><span class="inputContainer">
-                  <input type="tel" name="phone" placeholder="Phone: +1 888 888 8888" minlength="10" maxlength="14" title="Phone number"></span>
+              <form id="contactForm" autocomplete="nope"><span class="inputContainer">
+                  <input class="disableAutoComplete" type="text" name="name" required placeholder="Name*" autocomplete="false"></span><span class="inputContainer">
+                  <input class="disableAutoComplete" type="email" name="email" required placeholder="Email*" autocomplete="false"></span><span class="inputContainer">
+                  <textarea name="message" required placeholder="Message*" autocomplete="false"></textarea></span><br><br><span class="inputContainer">
+                  <input class="disableAutoComplete" type="tel" name="phone" placeholder="Phone: +1 888 888 8888" minlength="10" maxlength="14" title="Phone number" autocomplete="false"></span>
                 <input class="submitBtn" type="submit" value="SEND">
               </form>
             </div>
