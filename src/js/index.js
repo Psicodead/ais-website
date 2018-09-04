@@ -1,14 +1,12 @@
-var lodash = require('lodash');
 var $ = require('jquery');
-var json = require('./data/project.json'); //with path
+//var json = require('./data/project.json'); //with path
 var tempUri = window.location.hash;
 import { TweenMax, TimelineLite, Power4, Power3, Linear, Elastic, CSSPlugin, ScrollToPlugin} from 'gsap';
 //var mJson = JSON.parse(json);
-console.log("json",json.projects);
+//console.log("json",json.projects);
 
 function createProjects(){
 	for (var i = json.projects.work.length - 1; i >= 0; i--) {
-		//json.projects.work[i]
 		var obj = json.projects.work[i];
 		var work= $('<div />',{"class":'work'})
 		var wTitle = $('<h1 />',{"class":'title', text:obj.title})
@@ -85,11 +83,8 @@ function selectWork(){
 	$('.project').click(function(){
 		
 		setTimeout(()=>{
-			//console.log('datalink',$(this)[0].getAttribute("data-link"))
 			if(!$(this)[0].getAttribute("data-link"))
 				return
-			// hideSection($('.section').not('.hidden'));
-			// showSection($($(this)[0].getAttribute("data-link")));
 			window.location.href = $(this)[0].getAttribute("data-link");
 		},300)
 	})
@@ -166,37 +161,13 @@ function nav(){
 		},250)
 	})
 	$('.menu-work').click(()=>{
-		// hideSection($('.section').not('#work-section').not('.hidden'));
-		// setTimeout(()=>{
-		// 	showSection($('#work-section'));
-		// },300)
-		//$('.section').addClass('hidden')
-		//$('#work-section').removeClass('hidden');
-		
 		showCategoryWork();
 	})
 	$('.menu-lab').click(()=>{
-		// hideSection($('.section').not('#work-section').not('.hidden'));
-		// setTimeout(()=>{
-		// 	showSection($('#work-section'));
-		// },300)
 		showCategoryLab();
 	})
-	// $('.menu-about').click(()=>{
-	// 	hideSection($('.section').not('#about-section').not('.hidden'));
-	// 	setTimeout(()=>{
-	// 		showSection($('#about-section'));
-	// 		$('#about-section .content').scrollTop(0);
-	// 	},300)
-	// })
-	// $('.menu-contact').click(()=>{
-		
-	// })
+
 	$('.goBack .container').click(()=>{
-		// hideSection($('.section').not('#work-section').not('.hidden'));
-		// setTimeout(()=>{
-		// 	showSection($('#work-section'));
-		// },300)
 		window.location.href = '#work';
 		showCategoryWork();
 	})
