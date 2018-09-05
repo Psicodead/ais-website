@@ -4,7 +4,9 @@ var pug = require('gulp-pug');
 var babelify = require('babelify');
 var browserify = require("browserify");
 var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
 var connect = require('gulp-connect');
+var uglify = require('gulp-uglify');
 
 //TODO: add task to copy fonts
 //Copy images 
@@ -59,8 +61,10 @@ gulp.task('convert', function(){
         presets : ["es2015"]
         })).bundle()
         // vinyl-source-stream makes the bundle compatible with gulp
-        .pipe(source('index.js')) // Desired filename
+        .pipe(source('index.min.js')) // Desired filename
         // Output the file
+        .pipe(buffer())
+        .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
         .pipe(connect.reload());
 });
