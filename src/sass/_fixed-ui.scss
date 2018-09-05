@@ -7,7 +7,6 @@
 	padding: 100rem;
 	user-select: none;
 	pointer-events: none;
-	@include transition(top 0.6s);
 	.logo, .openMenuBtn, .closeMenuBtn{
 		pointer-events: auto;
 	}
@@ -56,6 +55,7 @@
 	}
 	//mobile
 	@media (min-width: 300px) and (max-width: 740px){
+		@include transition(top 0.3s);
 		.logo, .isotipo, .closeMenuBtn, .openMenuBtn{
 			top: 30rem;
 			width: 40rem;

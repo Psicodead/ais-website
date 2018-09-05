@@ -309,11 +309,7 @@ body {
     left: 0;
     padding: 100rem;
     user-select: none;
-    pointer-events: none;
-    -moz-transition: top 0.6s;
-    -o-transition: top 0.6s;
-    -webkit-transition: top 0.6s;
-    transition: top 0.6s; }
+    pointer-events: none; }
     body .fixed-ui .logo, body .fixed-ui .openMenuBtn, body .fixed-ui .closeMenuBtn {
       pointer-events: auto; }
     body .fixed-ui .logo {
@@ -360,18 +356,23 @@ body {
     body .fixed-ui .closeMenuBtn {
       width: 30rem; }
     @media (min-width: 300px) and (max-width: 740px) {
-      body .fixed-ui .logo, body .fixed-ui .isotipo, body .fixed-ui .closeMenuBtn, body .fixed-ui .openMenuBtn {
-        top: 30rem;
-        width: 40rem; }
-      body .fixed-ui .logo {
-        left: 30rem; }
-      body .fixed-ui .isotipo {
-        left: 80rem;
-        display: none; }
-      body .fixed-ui .closeMenuBtn {
-        width: 30rem; }
-      body .fixed-ui .closeMenuBtn, body .fixed-ui .openMenuBtn {
-        right: 30rem; } }
+      body .fixed-ui {
+        -moz-transition: top 0.3s;
+        -o-transition: top 0.3s;
+        -webkit-transition: top 0.3s;
+        transition: top 0.3s; }
+        body .fixed-ui .logo, body .fixed-ui .isotipo, body .fixed-ui .closeMenuBtn, body .fixed-ui .openMenuBtn {
+          top: 30rem;
+          width: 40rem; }
+        body .fixed-ui .logo {
+          left: 30rem; }
+        body .fixed-ui .isotipo {
+          left: 80rem;
+          display: none; }
+        body .fixed-ui .closeMenuBtn {
+          width: 30rem; }
+        body .fixed-ui .closeMenuBtn, body .fixed-ui .openMenuBtn {
+          right: 30rem; } }
     @media (max-height: 428px) {
       body .fixed-ui {
         top: -100px !important; } }
