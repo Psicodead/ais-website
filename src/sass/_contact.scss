@@ -228,13 +228,13 @@
 			   	height: 100%;
 				padding: 60rem 20rem;
 				display: flex;
-				justify-content: space-around;
+				justify-content: space-between;
 				flex-direction: column;
 				overflow-y: visible;
 				.lineTitle{
 					position: relative;
-					margin-bottom: 30rem;
-					margin-top: 50rem;
+					margin-bottom: 20rem;
+					margin-top: 30rem;
 					bottom: unset;
 					@include transform(none);
 					h1{
