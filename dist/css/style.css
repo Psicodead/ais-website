@@ -374,7 +374,7 @@ body {
         right: 30rem; } }
     @media (max-height: 428px) {
       body .fixed-ui {
-        top: -100px; } }
+        top: -100px !important; } }
   body #about-section {
     padding: 0; }
     body #about-section .content {
