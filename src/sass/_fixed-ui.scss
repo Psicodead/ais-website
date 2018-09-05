@@ -7,6 +7,9 @@
 	padding: 100rem;
 	user-select: none;
 	pointer-events: none;
+	&.out{
+		top: -100rem;
+	}
 	.logo, .openMenuBtn, .closeMenuBtn{
 		pointer-events: auto;
 	}
@@ -76,6 +79,6 @@
 		}
 	}
 	@media(max-height: 428px){
-		top: -100px !important;
+		top: -100rem !important;
 	}
 }

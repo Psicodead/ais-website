@@ -310,6 +310,8 @@ body {
     padding: 100rem;
     user-select: none;
     pointer-events: none; }
+    body .fixed-ui.out {
+      top: -100rem; }
     body .fixed-ui .logo, body .fixed-ui .openMenuBtn, body .fixed-ui .closeMenuBtn {
       pointer-events: auto; }
     body .fixed-ui .logo {
@@ -375,7 +377,7 @@ body {
           right: 30rem; } }
     @media (max-height: 428px) {
       body .fixed-ui {
-        top: -100px !important; } }
+        top: -100rem !important; } }
   body #about-section {
     padding: 0; }
     body #about-section .content {

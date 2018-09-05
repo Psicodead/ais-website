@@ -20862,14 +20862,16 @@ function scrollDirection() {
 			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 				// is mobile..
 				//alert('ismobile');
-				_gsap.TweenLite.to($('.fixed-ui'), 0.6, { top: '-100px' });
+				$('.fixed-ui').addClass('out');
+				//TweenLite.to($('.fixed-ui'),0.6,{top:'-100px'})
 			}
 		} else {
 			//Scrolling Up
 			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 				// is mobile..
 				//alert('ismobile');
-				_gsap.TweenLite.to($('.fixed-ui'), 0.6, { top: '0%' });
+				//TweenLite.to($('.fixed-ui'),0.6,{top:'0%'})
+				$('.fixed-ui').removeClass('out');
 			}
 			console.log('Up');
 		}
