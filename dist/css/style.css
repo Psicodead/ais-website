@@ -1032,10 +1032,12 @@ body {
             body #contact-section .content .wrapper .form-container .copy {
               font-size: 13rem;
               line-height: 21rem; }
-            body #contact-section .content .wrapper .form-container form .inputContainer {
-              width: 100% !important; }
-              body #contact-section .content .wrapper .form-container form .inputContainer input {
-                height: 30rem; }
-            body #contact-section .content .wrapper .form-container form input[type=submit] {
-              width: 100%;
-              margin-bottom: 30rem; } }
+            body #contact-section .content .wrapper .form-container form {
+              margin-bottom: 40rem; }
+              body #contact-section .content .wrapper .form-container form .inputContainer {
+                width: 100% !important; }
+                body #contact-section .content .wrapper .form-container form .inputContainer input {
+                  height: 30rem; }
+              body #contact-section .content .wrapper .form-container form input[type=submit] {
+                width: 100%;
+                margin-bottom: 30rem; } }
