@@ -309,7 +309,11 @@ body {
     left: 0;
     padding: 100rem;
     user-select: none;
-    pointer-events: none; }
+    pointer-events: none;
+    -moz-transition: top 0.6s;
+    -o-transition: top 0.6s;
+    -webkit-transition: top 0.6s;
+    transition: top 0.6s; }
     body .fixed-ui .logo, body .fixed-ui .openMenuBtn, body .fixed-ui .closeMenuBtn {
       pointer-events: auto; }
     body .fixed-ui .logo {
@@ -368,6 +372,9 @@ body {
         width: 30rem; }
       body .fixed-ui .closeMenuBtn, body .fixed-ui .openMenuBtn {
         right: 30rem; } }
+    @media (max-height: 428px) {
+      body .fixed-ui {
+        top: -100px; } }
   body #about-section {
     padding: 0; }
     body #about-section .content {
