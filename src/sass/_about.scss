@@ -1,21 +1,21 @@
 #about-section{
     padding: 0;
+    .cornerImage{
+        width: 33%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        pointer-events: none;
+    }
    .content{
         padding: 0 80rem;
-        background-color: $darkGrey;
+        //background-color: $darkGrey;
         //position: absolute;
         //left: 0;
         //top: 0;
         width: 100%;
         height: 100%;
-        overflow-y: scroll;
-        .cornerImage{
-            width: 33%;
-            position: absolute;
-            right: 0;
-            top: 0;
-            pointer-events: none;
-        }
+        //overflow-y: scroll;
         .lineTitle{
             transform-origin: left center;
             transform: rotate(-90deg);

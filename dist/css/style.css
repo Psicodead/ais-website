@@ -79,6 +79,10 @@ body {
         overflow: hidden;
         width: 100%;
         height: 100%; }
+      body .body-wrapper .section.scrollable {
+        overflow-y: scroll; }
+        body .body-wrapper .section.scrollable .content {
+          overflow: visible; }
       body .body-wrapper .section.hidden {
         display: none;
         opacity: 0; }
@@ -380,18 +384,16 @@ body {
         top: -100rem !important; } }
   body #about-section {
     padding: 0; }
+    body #about-section .cornerImage {
+      width: 33%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      pointer-events: none; }
     body #about-section .content {
       padding: 0 80rem;
-      background-color: #151515;
       width: 100%;
-      height: 100%;
-      overflow-y: scroll; }
-      body #about-section .content .cornerImage {
-        width: 33%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        pointer-events: none; }
+      height: 100%; }
       body #about-section .content .lineTitle {
         transform-origin: left center;
         transform: rotate(-90deg);
@@ -656,7 +658,6 @@ body {
       padding-top: 120rem;
       width: 100%;
       height: 100%;
-      overflow-y: scroll;
       display: flex;
       flex-direction: column; }
       body .work-detail.section .content .contentWrapper {
