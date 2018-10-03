@@ -32,14 +32,14 @@
 		img{
 			height: 100%;
 			top: 0;
-			@include transform(translateX(-100%));
+			//@include transform(translateX(-100%));
 			position: relative;
 			@include transition(transform 600ms);
 		}
 		&.show{
 			//display: block;
 			img{
-				@include transform(translateX(0));
+				//@include transform(translateX(0));
 			}
 		}
 	}

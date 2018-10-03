@@ -69,7 +69,7 @@ body {
     body .body-wrapper .section {
       overflow: hidden;
       display: block;
-      padding: 20px;
+      padding: 0;
       width: 100%;
       height: 100%;
       opacity: 1;
@@ -338,22 +338,11 @@ body {
       body .fixed-ui .isotipo img {
         height: 100%;
         top: 0;
-        -moz-transform: translateX(-100%);
-        -o-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
         position: relative;
         -moz-transition: transform 600ms;
         -o-transition: transform 600ms;
         -webkit-transition: transform 600ms;
         transition: transform 600ms; }
-      body .fixed-ui .isotipo.show img {
-        -moz-transform: translateX(0);
-        -o-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -webkit-transform: translateX(0);
-        transform: translateX(0); }
     body .fixed-ui .closeMenuBtn, body .fixed-ui .openMenuBtn {
       cursor: pointer;
       position: absolute;
