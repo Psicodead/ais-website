@@ -69,7 +69,7 @@
                 bottom: 0;
             }
         }
-        .team-container{
+        .team-container, .clients-container{
             padding-left: 18%;
             margin-top: 100rem;
             display: flex;
@@ -107,10 +107,25 @@
             }
             .lineTitle{
                 left: 0;
-                top: 12%;
+                top: 5%;
                 h1{
                     top: 8rem;
                     right: 0;
+                }
+            }
+        }
+        .clients-container{
+            justify-content: space-around;
+            .leftPhotos, .rightPhotos{
+                width: 25%;
+            }
+            .rightPhotos{
+                padding-top: 10%;
+            }
+            .team{
+                margin-bottom: 5%;
+                .detail{
+                    display: none;
                 }
             }
         }
@@ -219,7 +234,7 @@
                     }
                 }
             }
-            .team-container{
+            .team-container,  .clients-container{
                 display: block;
                 margin-top: 70rem;
                 padding: 0;
@@ -247,6 +262,19 @@
                 .leftPhotos, .rightPhotos{
                     vertical-align: top;
                     width: 49%;
+                }
+                .rightPhotos{
+                    padding-top: 4%;
+                }
+            }
+            .clients-container{
+                display: flex;
+                flex-wrap: wrap;
+                .lineTitle{
+                    width: 100%;
+                }
+                .leftPhotos, .rightPhotos{
+                    width: 33%;
                 }
                 .rightPhotos{
                     padding-top: 6%;
