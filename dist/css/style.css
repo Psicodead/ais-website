@@ -461,13 +461,17 @@ body {
             top: 8rem;
             right: 0; }
       body #about-section .content .clients-container {
-        justify-content: space-around; }
+        justify-content: flex-start;
+        flex-wrap: wrap; }
         body #about-section .content .clients-container .leftPhotos, body #about-section .content .clients-container .rightPhotos {
-          width: 25%; }
+          width: 20%; }
+        body #about-section .content .clients-container .leftPhotos {
+          margin: 0 10%; }
         body #about-section .content .clients-container .rightPhotos {
-          padding-top: 10%; }
+          padding-top: 2%; }
         body #about-section .content .clients-container .team {
-          margin-bottom: 5%; }
+          width: 20%;
+          margin: 0 4%; }
           body #about-section .content .clients-container .team .detail {
             display: none; }
       body #about-section .content .services-container {

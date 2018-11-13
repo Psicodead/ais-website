@@ -115,15 +115,22 @@
             }
         }
         .clients-container{
-            justify-content: space-around;
+            justify-content: flex-start;
+            flex-wrap: wrap;
             .leftPhotos, .rightPhotos{
-                width: 25%;
+                width: 20%;
+            }
+            .leftPhotos{
+                margin: 0 10%;
             }
             .rightPhotos{
-                padding-top: 10%;
+                padding-top: 2%;
             }
+
             .team{
-                margin-bottom: 5%;
+                //margin-bottom: 5%;
+                width: 20%;
+                margin: 0 4%;
                 .detail{
                     display: none;
                 }
@@ -276,6 +283,7 @@
                 .leftPhotos, .rightPhotos{
                     width: 33%;
                 }
+                
                 .rightPhotos{
                     padding-top: 6%;
                 }
