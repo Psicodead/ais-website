@@ -81,6 +81,9 @@ function selectWork(){
 	$('.project.three').hover(()=>{
 		$('.three').addClass('selected');
 	})
+	$('.project.four').hover(()=>{
+		$('.four').addClass('selected');
+	})
 
 	$('.project').click(function(){
 		
@@ -200,6 +203,12 @@ function renderContent(uri){
 			hideSection($('.section').not('#come-find-me').not('.hidden'));
 			setTimeout(()=>{
 				showSection($('#come-find-me'));
+			},300)
+		break;
+		case '#g2':
+			hideSection($('.section').not('#g2').not('.hidden'));
+			setTimeout(()=>{
+				showSection($('#g2'));
 			},300)
 		break;
 		case '#carhartt':
