@@ -162,6 +162,13 @@
 		}
 	}
 	@media (min-width: 320px) and (max-width: 740px){
+		.bg-container{
+			.bg{
+				&.one{
+					background-image: url('../assets/images/cfm_featured_mobile.jpg');
+				}
+			}
+		}
 		.selector-container{
 	
 			.project-container{	
