@@ -51,9 +51,10 @@
 				margin-top: 100rem;
 				.pair{
 					display: flex;
+					flex-wrap: wrap;
 					justify-content: space-between;
 					align-items: center;
-					.around{
+					&.around{
 						justify-content: space-around;
 					}
 				}
@@ -74,7 +75,7 @@
 					margin: 30px 0;
 					outline: 0;
 					&.half{
-						width: 38%;
+						width: 35%;
 					}
 					&:focus{
 						outline: 0;
@@ -90,7 +91,7 @@
 						font-size: 12px;
 					}
 					&.small{
-						width: 45%;
+						width: 47%;
 						margin: 0;
 					}
 				}
@@ -150,7 +151,18 @@
 							@include transform(none);
 							//align-self: center;
 						}
-					}					
+					}
+					.external{
+						&.small{
+							width: 80%;
+						}
+					}
+					video{
+						width: 100%;
+						&.half{
+							width: 80%;
+						}
+					}
 				}
 				.goBack{
 					position: absolute;
