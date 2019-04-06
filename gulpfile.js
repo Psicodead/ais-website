@@ -11,14 +11,14 @@ var uglify = require('gulp-uglify');
 //TODO: add task to copy fonts
 //Copy images 
 gulp.task('copyfile', function(){
-gulp.src('src/assets/images/**.{jpg,png,gif,svg}').pipe(gulp.dest('dist/assets/images'))
+gulp.src('src/assets/images/**.{jpg,jpeg,png,gif,svg}').pipe(gulp.dest('dist/assets/images'))
 .pipe(connect.reload());
 console.log("Images copied!");
 });
 
 //copy audios
 gulp.task('copyaudios', function(){
-gulp.src('src/audio/**.{mp3,wav,mp4,wv}').pipe(gulp.dest('dist/assets/audio'))
+gulp.src('src/assets/media/**.{mp3,wav,mp4,wv}').pipe(gulp.dest('dist/assets/media'))
 .pipe(connect.reload());
 console.log("Audios copied!");
 });

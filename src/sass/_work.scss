@@ -56,6 +56,9 @@
 				background-image: url('../assets/images/carhartt_featured.jpg');
 			}
 			&.four{
+				background-image: url('../assets/images/carhartt_featured.jpg');
+			}
+			&.five{
 				background-image: url('../assets/images/monarch_featured.jpg');
 			}
 		}
@@ -63,6 +66,7 @@
 	.selector-container{
 		width: 100%;
 		height: 100%;
+		background-color: rgba(0,0,0,.2);
 		.project-container{
 			&.hidden{
 				display: none;
@@ -70,12 +74,15 @@
 		}
 		.project-container{	
 			width: 100%;
-			height: 100%;
+			// height: 100%;
+			height: 80%;
+			transform: translateY(-50%);
+			top: 50%;
+			overflow: scroll;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			justify-content: center;
-			background-color: rgba(0,0,0,.2);
+			justify-content: flex-start;
 			.project{
 				cursor: pointer;
 				margin: 30rem auto;
